@@ -1,0 +1,23 @@
+# Book scan (too big for GitHub, copyrighted)
+book/
+*.pdf
+
+# Generated page images
+data/pages/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Env / OS
+.env*
+!.env.example
+.DS_Store
+Thumbs.db
