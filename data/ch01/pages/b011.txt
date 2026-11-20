@@ -1,0 +1,11 @@
+## [?ctors] Affecting Transpiration in Plants
+Rate of transpiration is affected by the following [?vironmental] factors.
+- [?] Humidity: Water vapours present in the air affect the rate of transpiration. The rate of transpiration is inversely proportional to the humidity. Rate of transpiration decreases with increase of humidity in the air.
+- [?] Temperature: Increase in temperature decreases the humidity and opens the stomata. As a result, rate of transpiration increases.
+- [?] Light Intensity: Light increases the rate of transpiration by opening the stomata.
+- [?] Air/Wind speed: Rate of transpiration increases with wind speed because the saturated air around the leaves is removed.
+[FIG] Pressure in leaves must be lower than that of roots for water to flow upward. / Atmospheric water vapour / Atmosphere / Leaf / Transpiration / Transport of water to leaf / (a) Transport from root to leaf / Pressure in roots must be lower than that of soil for water to absorb. / Root / Soil / H2O / For transpiration to occur, atmospheric condition must be lower than that of a leaf. / (b) Transpiration — Fig. 1.12 Internal factors that affect the rate of transpiration
+## [?nportance] of Transpiration
+[?e] significance of transpiration for the plant has been discussed below:
+- [?] Transpiration provides minerals and water to all parts of the plant.
+- [?] Transpiration lowers the temperature of around the plants and causes cooling.

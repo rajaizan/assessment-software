@@ -20,6 +20,46 @@ class Slo(BaseModel):
         return value
 
 
+BLOCK_KINDS = ("heading", "paragraph", "list_item", "figure", "box", "table", "table_row")
+
+
+class TextBlock(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(pattern=r"^ch\d{2}-p\d{3}-b\d{2}$")
+    printed_page: int = Field(ge=1)
+    pdf_page: int = Field(ge=1)
+    section: str  # topic id like "1.4", or "intro", "key_points", "exercise"
+    kind: str
+    text: str = Field(min_length=1)
+    has_gaps: bool  # True if text contains [?...] or UNREADABLE marks
+
+    @field_validator("kind")
+    @classmethod
+    def known_kind(cls, value: str) -> str:
+        if value not in BLOCK_KINDS:
+            raise ValueError(f"unknown block kind {value!r}")
+        return value
+
+
+class Topic(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(pattern=r"^\d+\.\d+$")
+    title: str
+    printed_pages: list[int] = Field(min_length=2, max_length=2)
+
+
+class ChapterText(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    chapter: int = Field(ge=1, le=12)
+    title: str
+    source: str
+    topics: list[Topic] = Field(min_length=1)
+    blocks: list[TextBlock] = Field(min_length=1)
+
+
 class ChapterSlos(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
