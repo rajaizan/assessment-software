@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from typing import Literal
+
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class Slo(BaseModel):
@@ -58,6 +60,44 @@ class ChapterText(BaseModel):
     source: str
     topics: list[Topic] = Field(min_length=1)
     blocks: list[TextBlock] = Field(min_length=1)
+
+
+class Question(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(pattern=r"^ch\d{2}-q\d{3}$")
+    chapter: int = Field(ge=1, le=12)
+    topic: str = Field(pattern=r"^\d+\.\d+$")
+    slo_id: str = Field(pattern=r"^ch\d{2}-slo\d{2}$")
+    type: Literal["mcq", "short"]
+    question: str = Field(min_length=5)
+    options: list[str] = Field(default_factory=list)
+    answer: str = Field(min_length=1)
+    marks: int = Field(ge=1, le=5)
+    page: int = Field(ge=1)  # printed page number of the source excerpt
+    source_excerpt: str = Field(min_length=15)
+    review_status: Literal["pending", "approved", "rejected"] = "pending"
+    review_note: str = ""
+
+    @model_validator(mode="after")
+    def options_match_type(self) -> "Question":
+        if self.type == "mcq":
+            if len(self.options) != 4:
+                raise ValueError("an MCQ needs exactly 4 options")
+            if len({o.strip().lower() for o in self.options}) != 4:
+                raise ValueError("MCQ options must all be different")
+            if self.answer not in self.options:
+                raise ValueError("MCQ answer must be one of the options, word for word")
+        elif self.options:
+            raise ValueError("a short-answer question must not have options")
+        return self
+
+
+class QuestionBank(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    chapter: int = Field(ge=1, le=12)
+    questions: list[Question]
 
 
 class ChapterSlos(BaseModel):

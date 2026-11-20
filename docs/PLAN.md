@@ -33,7 +33,7 @@ Notes from task 5:
 ## Day 2 – question bank, validator, app skeleton
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 7 | Question schema + validator (unknown words vs chapter text + `common_words.txt`, SLO exists, excerpt really in text, page in chapter range) | pytest passes, incl. tests that reject an outside word, fake SLO, fake excerpt | M | todo |
+| 7 | Question schema + validator (unknown words vs chapter text + `common_words.txt`, SLO exists, excerpt really in text, page in chapter range) | pytest passes, incl. tests that reject an outside word, fake SLO, fake excerpt | M | done (18 tests pass) |
 | 8 | Write Ch1 short-answer questions | ≥ 3 per SLO, all pass validator | M | todo |
 | 9 | Write Ch1 MCQs | ≥ 3 per SLO, all pass validator | S | todo |
 | 10 | Izan reviews Ch1 questions (approve/reject in a simple review list) | Every question has `review_status`; rejected ones fixed or removed | M (Izan) | todo |
