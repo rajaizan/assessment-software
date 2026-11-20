@@ -34,11 +34,45 @@ Notes from task 5:
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
 | 7 | Question schema + validator (unknown words vs chapter text + `common_words.txt`, SLO exists, excerpt really in text, page in chapter range) | pytest passes, incl. tests that reject an outside word, fake SLO, fake excerpt | M | done (18 tests pass) |
-| 8 | Write Ch1 short-answer questions | ≥ 3 per SLO, all pass validator | M | todo |
-| 9 | Write Ch1 MCQs | ≥ 3 per SLO, all pass validator | S | todo |
-| 10 | Izan reviews Ch1 questions (approve/reject in a simple review list) | Every question has `review_status`; rejected ones fixed or removed | M (Izan) | todo |
-| 11 | Next.js app: class/subject/chapter/topic pickers load from JSON | Page opens instantly with Class 7 / Science / Ch1 topics; lint + typecheck pass | M | todo |
-| 12 | Random sampling (by chapter, topics, count, type) | Vitest passes: right count, no duplicates, only chosen topics, clear error if not enough questions | M | todo |
+| 8 | Add fill-blank + true/false to schema and validator | New tests pass | M | todo |
+| 8a | Write Ch1 bank in batches of one topic at a time (~20 per topic) | Each batch passes validator; total 150+ | M | todo |
+| 9 | Coverage report: questions per SLO / topic / type | Every SLO has 10+ questions | M | todo |
+| 10a | Claude self-review: re-check every question against its quote (answer really in quote? simple, clear wording?); clear ones → `approved` with note "self-checked", doubtful ones → `pending` with a reason | Every question approved or flagged | M | todo |
+| 10b | Izan spot-check: all flagged questions + 2 random approved per topic (~15 min) | Spot-check done; problems fixed or rejected | M (Izan) | todo |
+| 10c | Simple review page: one question at a time with answer + book quote, Approve / Reject buttons, saves to questions.json | Izan can review a batch with clicks only | S | todo |
+| 11 | Next.js app pickers (load from JSON): Class 7 → Science → Ch1; "Select by: Topics / SLOs" toggle; question type; count 10/15/20/25 | Works with the real bank; lint + typecheck pass | M | todo |
+| 12 | Sampling with spread + count limits | Vitest passes: right count, no duplicates, spread across chosen topics/SLOs, only approved, larger counts disabled when pool too small | M | todo |
+| - | Long-answer type | | C | cut |
+
+### Question bank decisions (agreed with Izan, 2026-11-20)
+- **Size:** about 150-180 questions for Chapter 1 (about 15-20 per SLO). Rule of thumb:
+  the pool for a selection should be 3-4x the paper size, so two papers share only a few
+  questions. Small topics (1.3, 1.6, 1.7, 1.8) can honestly support only about 10-20
+  questions; no padding with reworded copies.
+- **Types:** MCQ (1 mark), fill in the blank (1 mark), true/false (1 mark),
+  short answer (2 marks). One book fact can give several types.
+  Example (page 13): MCQ "What is the food of plants?"; fill-blank "______ is the food
+  of plants."; true/false "Oxygen is the food of plants." (False); short "Name the food of plants."
+
+### What the teacher sees
+1. Class 7 → Science → Chapter 1.
+2. "Select by: Topics | SLOs" toggle, then tick one or many (or "All").
+3. Question type: MCQ / Fill in the blank / True-False / Short answer / Mixed.
+4. Number of questions: 10 / 15 / 20 / 25. Counts larger than the available pool are
+   disabled, with the message "Only N questions available for this selection".
+5. Generate → print-ready PDF.
+
+Sampling rules: no duplicates in one paper; spread across the chosen SLOs/topics
+(round-robin); mixed papers use a fixed split (for example 25 = 10 MCQ + 5 fill-blank +
+5 T/F + 5 short), grouped by type with section headings and marks; only `approved`
+questions are used.
+
+### Review approach
+Izan does NOT read every question. The validator guarantees book-only words, real
+quotes, real SLOs/pages; Claude self-reviews all (10a); Izan spot-checks flagged + a
+random sample (10b, ~15 min). Accepted risk: a few awkward wordings may slip through,
+never outside facts. Any question can be set to `rejected` later and the app stops
+using it immediately. If behind: cut true/false first; keep MCQ + fill-blank + short.
 
 ## Day 3 – PDF, polish, rehearsal
 | # | Task | Done when | Pri | Status |
@@ -46,7 +80,7 @@ Notes from task 5:
 | 13 | Print layout: school name, class, subject, date, marks beside each question, total marks | Generated PDF looks right on A4 print preview | M | todo |
 | 14 | PDF download via Playwright (fallback: print CSS + browser "Save as PDF") | Click Generate → PDF downloads in < 5 s | M | todo |
 | 15 | Optional answer key (separate page) | Toggle works; key matches the questions | S | todo |
-| 16 | Mixed paper (MCQ + short) | Mixed option works and is tested | C | todo |
+| 16 | Mixed paper (all four types, grouped by type with section headings) | Mixed option works and is tested | C | todo |
 | 17 | Loading / empty / error states, every control works | Manual check list passes | M | todo |
 | 18 | Chapters 2-3 through tasks 4-10 | Bank for those chapters reviewed | C | todo |
 | 19 | Demo script + rehearsal | Full demo run twice without problems | M | todo |
@@ -62,5 +96,5 @@ data/chXX/       slos.json (typed by Izan), text.json, questions.json
 web/             Next.js app
 ```
 
-Question record: `id, chapter, topic, slo_id, type (mcq|short), question,
-options[], answer, marks, page, source_excerpt, review_status`.
+Question record: `id, chapter, topic, slo_id, type (mcq|fill_blank|true_false|short),
+question, options[], answer, marks, page, source_excerpt, review_status, review_note`.
