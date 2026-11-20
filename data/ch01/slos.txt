@@ -1,6 +1,14 @@
 # Chapter 1 – Plant System – SLOs (book page 1)
-# Type each SLO from the PHYSICAL book, exactly as printed, one per line.
+# Typed by Izan from the PHYSICAL book, exactly as printed, one per line.
 # Start each line with its number and a full stop, like:  1. Explain the root and ...
-# If a bullet runs over two lines in the book, still type it on ONE line here.
-# Lines starting with # are ignored. Save the file when done.
+# Lines starting with # are ignored.
 
+1. Explain the root and shoot system in plants. Label different parts of leaf, stem and root (external and internal structure).
+2. Predict the role of xylem and phloem in transport of water and food in plants by observing the cross section of the stem.
+3. Define the process of photosynthesis and derive word equation for it.
+4. Know that plants require minerals to maintain healthy growth and life processes (limited to magnesium to make chlorophyll and nitrates to make protein).
+5. Explain that the structure of leaves is adapted to the process of photosynthesis.
+6. Describe the process of respiration and write word equation for it.
+7. Compare and contrast the process of photosynthesis and respiration.
+8. Investigate the phenomenon of transpiration and its importance in plants (wind, temperature, light, humidity affecting rate of transpiration in plants).
+9. Explore and apply natural raise of water based on the principle of transpiration.

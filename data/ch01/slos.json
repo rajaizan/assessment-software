@@ -1,0 +1,53 @@
+{
+  "chapter": 1,
+  "title": "Plant System",
+  "printed_page": 1,
+  "source": "Typed by Izan from the physical book",
+  "slos": [
+    {
+      "id": "ch01-slo01",
+      "number": 1,
+      "text": "Explain the root and shoot system in plants. Label different parts of leaf, stem and root (external and internal structure)."
+    },
+    {
+      "id": "ch01-slo02",
+      "number": 2,
+      "text": "Predict the role of xylem and phloem in transport of water and food in plants by observing the cross section of the stem."
+    },
+    {
+      "id": "ch01-slo03",
+      "number": 3,
+      "text": "Define the process of photosynthesis and derive word equation for it."
+    },
+    {
+      "id": "ch01-slo04",
+      "number": 4,
+      "text": "Know that plants require minerals to maintain healthy growth and life processes (limited to magnesium to make chlorophyll and nitrates to make protein)."
+    },
+    {
+      "id": "ch01-slo05",
+      "number": 5,
+      "text": "Explain that the structure of leaves is adapted to the process of photosynthesis."
+    },
+    {
+      "id": "ch01-slo06",
+      "number": 6,
+      "text": "Describe the process of respiration and write word equation for it."
+    },
+    {
+      "id": "ch01-slo07",
+      "number": 7,
+      "text": "Compare and contrast the process of photosynthesis and respiration."
+    },
+    {
+      "id": "ch01-slo08",
+      "number": 8,
+      "text": "Investigate the phenomenon of transpiration and its importance in plants (wind, temperature, light, humidity affecting rate of transpiration in plants)."
+    },
+    {
+      "id": "ch01-slo09",
+      "number": 9,
+      "text": "Explore and apply natural raise of water based on the principle of transpiration."
+    }
+  ]
+}

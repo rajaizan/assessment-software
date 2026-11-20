@@ -14,7 +14,7 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done.
 | 1 | Folder skeleton, .gitignore, PDF copied into `book/` (Izan copies) | `git status` does not show the PDF; skeleton pushed | M | done |
 | 2 | Render all pages to images with PyMuPDF; record rotation per page and fix it | 196 images in `data/pages/`; every page checked upright | M | done |
 | 3 | Map the book: chapter titles + page ranges, glossary range → `data/book.json` | 12 chapters + glossary listed; Izan confirms against the contents page | M | done |
-| 4 | Izan types Chapter 1 SLOs → `data/ch01/slos.json` | File passes schema check; Izan says it matches the book | M (Izan) | todo |
+| 4 | Izan types Chapter 1 SLOs → `data/ch01/slos.json` | File passes schema check; Izan says it matches the book | M (Izan) | done (9 SLOs) |
 | 5 | Read Chapter 1 pages (Claude vision) → `data/ch01/text.json`: topics, text per page, UNREADABLE marks | Passes schema; Izan spot-checks 2 pages against the book | M | todo |
 | 6 | ADR 0001: offline question bank, no runtime AI | File exists, under 1 page | S | todo |
 
