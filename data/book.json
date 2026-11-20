@@ -9,7 +9,7 @@
     "pdf pages 1-3 are cover, credits (ii) and contents (iii); pdf page 196 is References / About the Authors.",
     "toc_title is from the contents page (printed page iii); title is from the chapter's own first page.",
     "Source of truth for start pages: contents page. End page = page before the next chapter starts.",
-    "Status: waiting for Izan to confirm against the physical book."
+    "Status: confirmed by Izan against the physical book (2026-11-20)."
   ],
   "chapters": [
     {"number": 1,  "title": "Plant System",                              "toc_title": "Plant System",                             "printed_pages": [1, 19],    "pdf_pages": [4, 22]},
