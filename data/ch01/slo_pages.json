@@ -1,9 +1,9 @@
 {
   "chapter": 1,
-  "status": "proposed",
+  "status": "confirmed",
   "notes": [
     "Printed book pages that teach each SLO. Proposed by Claude from the transcripts.",
-    "Izan confirms against the book; then set status to \"confirmed\".",
+    "Confirmed by Izan against the book on 2026-11-21.",
     "A question's source page must be in its SLO's list. Pages may appear under more than one SLO.",
     "Page 17 holds the Key Points; exercise pages 18-19 are never a question source."
   ],

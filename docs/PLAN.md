@@ -37,7 +37,7 @@ Notes from task 5:
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
 | 7 | Question schema + validator + tests | pytest passes, incl. outside word, fake SLO, fake excerpt | M | done |
-| 8 | SLO-only migration: ADR 0002, remove topics (schema, build_text, validator, tests, topics.json), text `part` labels, SLO page map, capacity report | pytest passes; text.json has no topics; Izan confirmed SLO pages | M | doing (waiting for Izan to confirm SLO pages) |
+| 8 | SLO-only migration: ADR 0002, remove topics (schema, build_text, validator, tests, topics.json), text `part` labels, SLO page map, capacity report | pytest passes; text.json has no topics; Izan confirmed SLO pages | M | done (25 tests; pages confirmed 2026-11-21) |
 | 9 | Write Ch1 bank one SLO at a time (Short, MCQ, True/False) | All pass validator; capacity report per SLO × type | M | todo |
 | 10a | Claude self-review: every question vs its quote (answer really in quote? tests its SLO? simple wording?); clear → `approved` "self-checked", doubtful → `pending` + reason | Every question approved or flagged | M | todo |
 | 10b | Izan spot-check: all flagged + 2 random approved per SLO (~15 min) | Problems fixed or rejected | M (Izan) | todo |
@@ -97,16 +97,20 @@ Notes from task 5:
   - C Short Questions "Answer briefly".
 
   Each heading shows its marks, e.g. "(9 × 1 = 9)". Marks also appear beside each question.
-- **Optional answer key** on a new page (answers + SLO number + book page,
-  for the teacher only). No SLO ids or quotes on the student paper.
+- **Optional answer key** on a new page (answers + book page, for the teacher only).
+  A **"Show SLO numbers"** checkbox adds the SLO number to each answer in the key.
+  No SLO ids or quotes on the student paper.
+
+### Decisions (Izan, 2026-11-21)
+1. Fill-in-the-blank: dropped.
+2. Mix split: even.
+3. Answer key: has a "Show SLO numbers" checkbox (on/off).
+4. The app must work **online and offline**.
 
 ### Open questions
-1. Is dropping fill-in-the-blank OK with the customer?
-2. Mix split: even (current) or weighted toward MCQ?
-3. Custom count range 1-50 OK?
-4. Is browser Save as PDF acceptable, or is a direct file download required? (A direct
-   download would need Playwright.)
-5. Should the answer key show SLO numbers?
+1. Besides the 10 / 15 / 25 buttons, may a teacher type their own number (for example 12 or 30)? If yes, what is the maximum?
+2. PDF method: is the browser's "Save as PDF" (works online and offline, no extra software) OK?
+   How should "offline" work: running on the teacher's laptop, or an installed web app?
 
 ### Risks
 - Low-text SLOs (Ch1 SLO 1 "label parts" needs diagrams; SLO 9 has about one
