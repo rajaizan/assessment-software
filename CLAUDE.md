@@ -44,7 +44,8 @@ licensing. Plan and status: docs/PLAN.md.
 ## Code standards
 Python 3.12 (pipeline, PyMuPDF, Pydantic, pytest). Next.js + strict TypeScript +
 Tailwind + shadcn/ui + Zod (app, Vitest). PDF = print CSS + browser "Save as PDF" (no Playwright).
-npm, not pnpm. No unnecessary dependencies.
+npm, not pnpm. No unnecessary dependencies. The app is an installable offline
+web app (PWA: manifest + hand-written service worker) for laptop and mobile.
 Small modules, validate data at boundaries, lint, tests for validator and
 sampling, conventional commits (feat:, fix:, docs:, chore:).
 

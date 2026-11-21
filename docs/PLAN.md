@@ -46,10 +46,11 @@ Notes from task 5:
 ## Day 3 – app, paper, rehearsal
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 11 | Next.js app: Class → Subject → Chapter → SLO checklist (with counts) → count 10/15/25/Custom 1-50 → type (Short/MCQ/True-False/Mix) → Generate | Every UI state below works; lint + typecheck pass | M | todo |
+| 11 | Next.js app: Class → Subject → Chapter → SLO checklist (with counts) → count 10/15/25 or Custom (1-30) → type (Short/MCQ/True-False/Mix) → Generate; layout works on phone and laptop | Every UI state below works; lint + typecheck pass | M | todo |
 | 12 | Selection logic as a pure TS module (fair share across SLOs, Mix split, shortfall report) | Vitest: caps, round-robin spread, Mix redistribution, no fact reused, seeded randomness | M | todo |
 | 13 | Print page (A4 print CSS) + optional answer key; browser Save as PDF | Print preview correct in Chrome | M | todo |
 | 14 | Loading / empty / error states, every control works | Manual check list passes | M | todo |
+| 14a | Installable offline web app (PWA): web manifest + hand-written service worker that caches the app and question data (no extra library) | Installs from the browser on laptop (Chrome) and Android phone; generates and prints a paper with internet switched off | M | todo |
 | 15 | Chapters 2-3: SLOs (Izan types), transcripts, SLO pages, bank | Bank for those chapters reviewed | C | todo |
 | 16 | Demo script + rehearsal | Full demo run twice without problems | M | todo |
 
@@ -78,6 +79,8 @@ Notes from task 5:
 | Situation | Teacher sees |
 |---|---|
 | No SLO selected | Generate disabled; "Select at least one SLO" |
+| Custom count empty, < 1 or > 30 | Generate disabled; "Enter a number from 1 to 30" |
+| Offline, app not installed yet | Browser's own offline page (first visit needs internet) |
 | Requested > possible | Before: "Up to 12 questions possible". After: "12 of 15 generated – the selected SLOs have only 12 Short questions." |
 | Type has 0 possible | Type option disabled, "0 available" |
 | Mix not fully met | Paper with what exists + per-type report |
@@ -105,12 +108,16 @@ Notes from task 5:
 1. Fill-in-the-blank: dropped.
 2. Mix split: even.
 3. Answer key: has a "Show SLO numbers" checkbox (on/off).
-4. The app must work **online and offline**.
+4. The app must work **online and offline**: it is an installable web app (PWA) that
+   teachers install from the website on laptop and mobile; after the first visit it works
+   without internet.
+5. Number of questions: buttons 10 / 15 / 25 plus a Custom box; Custom accepts 1-30.
+   Values above 30 or below 1 show "Enter a number from 1 to 30" and block Generate.
+6. PDF: browser print (Print → "Save as PDF" or a printer). No Playwright.
+   On phones the same Print button opens the phone's print / save-as-PDF screen.
 
 ### Open questions
-1. Besides the 10 / 15 / 25 buttons, may a teacher type their own number (for example 12 or 30)? If yes, what is the maximum?
-2. PDF method: is the browser's "Save as PDF" (works online and offline, no extra software) OK?
-   How should "offline" work: running on the teacher's laptop, or an installed web app?
+None right now.
 
 ### Risks
 - Low-text SLOs (Ch1 SLO 1 "label parts" needs diagrams; SLO 9 has about one
