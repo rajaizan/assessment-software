@@ -84,6 +84,14 @@ def test_simple_word_endings_are_allowed(ctx):
     assert stem("cells") == stem("cell")
 
 
+def test_base_form_of_a_chapter_word_is_allowed(ctx):
+    # the chapter has "faces", "diffuses", "removed" and "store"
+    for word in ("face", "diffuse", "remove", "stores"):
+        assert ctx.knows(word), word
+    # but a made-up word is still rejected
+    assert not ctx.knows("enzyme")
+
+
 def test_rejects_long_sentence(ctx):
     long_q = "What is " + " and ".join(["the food of plants"] * 8) + "?"
     assert any("sentence too long" in p for p in check_question(changed(GOOD_SHORT, question=long_q), ctx))

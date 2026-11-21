@@ -77,7 +77,17 @@ class Context:
         self._stems = {stem(w) for w in self.vocabulary | self.common}
 
     def knows(self, word: str) -> bool:
-        return word in self.vocabulary or word in self.common or stem(word) in self._stems
+        known = self.vocabulary | self.common
+        if word in known or stem(word) in self._stems:
+            return True
+        # simple inflections: "face" is allowed if the chapter has "faces",
+        # "stores" if it has "store", and so on. The base form must be in the chapter.
+        for suffix in ("s", "es", "d", "ed", "ing"):
+            if word + suffix in self.vocabulary:
+                return True
+            if word.endswith(suffix) and word[: -len(suffix)] in known:
+                return True
+        return False
 
 
 def load_common_words(path: Path) -> set[str]:
