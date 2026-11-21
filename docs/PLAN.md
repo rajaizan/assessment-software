@@ -39,8 +39,8 @@ Notes from task 5:
 | 7 | Question schema + validator + tests | pytest passes, incl. outside word, fake SLO, fake excerpt | M | done |
 | 8 | SLO-only migration: ADR 0002, remove topics (schema, build_text, validator, tests, topics.json), text `part` labels, SLO page map, capacity report | pytest passes; text.json has no topics; Izan confirmed SLO pages | M | done (25 tests; pages confirmed 2026-11-21) |
 | 9 | Write Ch1 bank one SLO at a time (Short, MCQ, True/False) | All pass validator; capacity report per SLO × type | M | done (174: 57 MCQ, 63 T/F, 54 Short; 17-22 per SLO; all `pending` until 10a) |
-| 10a | Claude self-review: every question vs its quote (answer really in quote? tests its SLO? simple wording?); clear → `approved` "self-checked", doubtful → `pending` + reason | Every question approved or flagged | M | todo |
-| 10b | Izan spot-check: all flagged + 2 random approved per SLO (~15 min) | Problems fixed or rejected | M (Izan) | todo |
+| 10a | Claude self-review: every question vs its quote (answer really in quote? tests its SLO? simple wording?); clear → `approved` "self-checked", doubtful → `pending` + reason | Every question approved or flagged | M | done (172 approved incl. 7 small fixes; 2 flagged) |
+| 10b | Izan spot-check: all flagged + 2 random approved per SLO (~15 min) | Problems fixed or rejected | M (Izan) | doing (list in `data/ch01/spot_check.md`: 2 flagged + 18 sample) |
 | 10c | Simple review page: one question at a time with answer + quote, Approve / Reject | Izan can review with clicks only | S | todo |
 
 ## Day 3 – app, paper, rehearsal

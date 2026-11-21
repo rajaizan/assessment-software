@@ -17,8 +17,8 @@
       "marks": 1,
       "page": 4,
       "source_excerpt": "Roots, stem and leaves are major plant organs.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q002",
@@ -36,8 +36,8 @@
       "marks": 1,
       "page": 5,
       "source_excerpt": "Epidermis: It is the outermost protective layer.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q003",
@@ -55,8 +55,8 @@
       "marks": 1,
       "page": 5,
       "source_excerpt": "pericycle. It develops lateral roots and provides support to vascular",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q004",
@@ -74,8 +74,8 @@
       "marks": 1,
       "page": 6,
       "source_excerpt": "A stem has nodes, internodes, and scars externally.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q005",
@@ -93,8 +93,8 @@
       "marks": 1,
       "page": 7,
       "source_excerpt": "The internal structure of a leaf has three distinct layers of cells such as epidermis, mesophyll, and vascular bundles.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q006",
@@ -112,8 +112,8 @@
       "marks": 1,
       "page": 7,
       "source_excerpt": "The lower epidermis contains stomata (special openings for gaseous exchange) surrounded by two guard cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q007",
@@ -131,8 +131,8 @@
       "marks": 1,
       "page": 8,
       "source_excerpt": "A plant has two major organ systems: root system and shoot system.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q008",
@@ -145,8 +145,8 @@
       "marks": 1,
       "page": 2,
       "source_excerpt": "Dermal tissues form the protective covering of the plant organs.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q009",
@@ -159,22 +159,22 @@
       "marks": 1,
       "page": 2,
       "source_excerpt": "Trichomes are very thin and small hair like extensions",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q010",
       "chapter": 1,
       "slo_id": "ch01-slo01",
       "type": "true_false",
-      "question": "Each root has root hair and root cap.",
+      "question": "A root has root hair and root cap.",
       "options": [],
       "answer": "True",
       "marks": 1,
       "page": 5,
       "source_excerpt": "root has root hair and root cap.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: 'Each' is cut off in the scan; statement now uses only visible words)"
     },
     {
       "id": "ch01-q011",
@@ -187,22 +187,22 @@
       "marks": 1,
       "page": 6,
       "source_excerpt": "Pith: Pith is the central region in roots.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q012",
       "chapter": 1,
       "slo_id": "ch01-slo01",
       "type": "true_false",
-      "question": "The outer surface of woody stems is hard and dead.",
+      "question": "The surface of woody stems is hard and dead.",
       "options": [],
       "answer": "True",
       "marks": 1,
       "page": 6,
       "source_excerpt": "surface of woody stems is hard and dead.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: 'outer' is cut off in the scan)"
     },
     {
       "id": "ch01-q013",
@@ -215,8 +215,8 @@
       "marks": 1,
       "page": 7,
       "source_excerpt": "xylem faces towards the pith while phloem faces towards the pericycle.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q014",
@@ -229,8 +229,8 @@
       "marks": 1,
       "page": 8,
       "source_excerpt": "The shoot system grows positively towards light while root",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q015",
@@ -243,8 +243,8 @@
       "marks": 1,
       "page": 6,
       "source_excerpt": "Cambium is absent.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q016",
@@ -257,8 +257,8 @@
       "marks": 2,
       "page": 2,
       "source_excerpt": "on the basis of their functions i.e. dermal tissues,",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q017",
@@ -271,8 +271,8 @@
       "marks": 2,
       "page": 4,
       "source_excerpt": "hold the plant firmly in soil and absorb water and nutrients from the soil and conduct it to the stem.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q018",
@@ -285,8 +285,8 @@
       "marks": 2,
       "page": 5,
       "source_excerpt": "Their cells lack intra-cellular spaces. It controls water transport.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q019",
@@ -299,8 +299,8 @@
       "marks": 2,
       "page": 6,
       "source_excerpt": "Its cells have large intercellular spaces and store food.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q020",
@@ -313,8 +313,8 @@
       "marks": 2,
       "page": 7,
       "source_excerpt": "The internal structure of a leaf has three distinct layers of cells such as epidermis, mesophyll, and vascular bundles.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q021",
@@ -327,8 +327,8 @@
       "marks": 2,
       "page": 7,
       "source_excerpt": "palisade mesophyll cells and spongy mesophyll cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q022",
@@ -341,8 +341,8 @@
       "marks": 2,
       "page": 8,
       "source_excerpt": "The root system anchors plants into the soil; absorbs nutrients and water from the soil.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q023",
@@ -360,8 +360,8 @@
       "marks": 1,
       "page": 3,
       "source_excerpt": "One-way only / Water and minerals",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q024",
@@ -379,8 +379,8 @@
       "marks": 1,
       "page": 3,
       "source_excerpt": "Phloem tissues conduct food throughout the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q025",
@@ -398,8 +398,8 @@
       "marks": 1,
       "page": 7,
       "source_excerpt": "tissues are separated by vascular cambium.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q026",
@@ -417,8 +417,8 @@
       "marks": 1,
       "page": 9,
       "source_excerpt": "It distributes food from leaves to all other parts. It is called translocation.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q027",
@@ -436,8 +436,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Xylem cells are known as water conducting cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q028",
@@ -455,8 +455,8 @@
       "marks": 1,
       "page": 12,
       "source_excerpt": "The sieve tubes: They conduct food and have perforations to filter impurities and regulate the smooth flow of the food.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q029",
@@ -474,8 +474,8 @@
       "marks": 1,
       "page": 12,
       "source_excerpt": "They are known as fibers and sclereids.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q030",
@@ -488,8 +488,8 @@
       "marks": 1,
       "page": 3,
       "source_excerpt": "Vascular tissues are called conducting tissues.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q031",
@@ -502,8 +502,8 @@
       "marks": 1,
       "page": 3,
       "source_excerpt": "They are found in between the dermal and ground tissues.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q032",
@@ -516,8 +516,8 @@
       "marks": 1,
       "page": 3,
       "source_excerpt": "Thick walls stiffened with lignin",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q033",
@@ -530,8 +530,8 @@
       "marks": 1,
       "page": 12,
       "source_excerpt": "Companion cells: They are attached to sieve tubes.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q034",
@@ -544,8 +544,8 @@
       "marks": 1,
       "page": 12,
       "source_excerpt": "Supportive cells: These cells are sclerenchyma in nature.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q035",
@@ -558,8 +558,8 @@
       "marks": 1,
       "page": 12,
       "source_excerpt": "Phloem vessels build up pressure inside",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q036",
@@ -572,8 +572,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Phloem cells transport food produced by the leaves throughout the plant (translocation).",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q037",
@@ -586,8 +586,8 @@
       "marks": 2,
       "page": 12,
       "source_excerpt": "This process is known as translocation.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q038",
@@ -600,8 +600,8 @@
       "marks": 2,
       "page": 3,
       "source_excerpt": "They are composed of sieve tubes, companion cells, and supportive",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q039",
@@ -614,8 +614,8 @@
       "marks": 2,
       "page": 12,
       "source_excerpt": "They are parenchyma in nature. They receive food from the leaves and store them until needed.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q040",
@@ -628,8 +628,8 @@
       "marks": 2,
       "page": 12,
       "source_excerpt": "The sieve tubes: They conduct food and have perforations to filter impurities and regulate the smooth flow of the food.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q041",
@@ -642,8 +642,8 @@
       "marks": 2,
       "page": 12,
       "source_excerpt": "stem, flower, fruit, branches), food is released out of the phloem.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q042",
@@ -656,8 +656,8 @@
       "marks": 2,
       "page": 7,
       "source_excerpt": "xylem faces towards the pith while phloem faces towards the pericycle.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q043",
@@ -675,8 +675,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "The chloroplast contains a green pigment called chlorophyll.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q044",
@@ -694,8 +694,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Carbon dioxide (air) enters into the leaf cells through stomata and the xylem cells provide water.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q045",
@@ -713,8 +713,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "react and make glucose and oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q046",
@@ -732,8 +732,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "It takes place in leaves mainly, where chloroplast is present.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q047",
@@ -751,8 +751,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Light is written above the arrow because it does not take part in",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q048",
@@ -770,8 +770,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Glucose is the food of plants.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q049",
@@ -784,8 +784,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Glucose is the food of plants.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q050",
@@ -798,8 +798,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "reaction. It just triggers the reaction.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q051",
@@ -812,8 +812,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "It traps heat and light from the sun rays falling over it.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q052",
@@ -826,8 +826,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Food making is a multi-step process.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q053",
@@ -840,8 +840,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "process by which green plants transform light energy into chemical",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q054",
@@ -854,8 +854,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "As you know, plants prepare their food themselves.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q055",
@@ -868,8 +868,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize nutrients from carbon dioxide and water.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q056",
@@ -882,8 +882,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "Carbon dioxide + water —(Light / Chlorophyll)→ glucose + oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q057",
@@ -896,8 +896,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "process by which green plants transform light energy into chemical",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q058",
@@ -910,8 +910,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "Light is written above the arrow because it does not take part in",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q059",
@@ -924,8 +924,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "It traps heat and light from the sun rays falling over it.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q060",
@@ -938,8 +938,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "Carbon dioxide (air) enters into the leaf cells through stomata and the xylem cells provide water.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q061",
@@ -952,8 +952,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "react and make glucose and oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q062",
@@ -972,7 +972,7 @@
       "page": 17,
       "source_excerpt": "Magnesium is essential to make chlorphyll which gives green",
       "review_status": "pending",
-      "review_note": ""
+      "review_note": "flagged: Quote contains the book's typo 'chlorphyll'. The question itself is spelled correctly. Please confirm it is OK to use."
     },
     {
       "id": "ch01-q063",
@@ -990,8 +990,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "and utilize them to make proteins.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q064",
@@ -1009,8 +1009,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "Mineral elements from the soil enter the roots of plants in the form of solution.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q065",
@@ -1028,8 +1028,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Nitrates are nitrogen based compounds.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q066",
@@ -1047,8 +1047,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "to increase the yield and growth of crops.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q067",
@@ -1066,8 +1066,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "However, most minerals are moved into the plant root cells using energy.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q068",
@@ -1080,8 +1080,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "They need mineral elements for normal and healthy growth.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q069",
@@ -1094,8 +1094,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "This is because there are usually fewer minerals in the soil than in the plant cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q070",
@@ -1108,8 +1108,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Without magnesium chlorophyll cannot capture the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q071",
@@ -1122,8 +1122,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Magnesium is used by chlorophyll to capture energy and nitrates are used by plants to produce protein.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q072",
@@ -1136,8 +1136,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "Some of the minerals dissolved in the water enter the root hair cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q073",
@@ -1150,8 +1150,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Magnesium is required by the plant cells to capture energy needed",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q074",
@@ -1164,8 +1164,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "minerals to make food molecules such as protein out of the glucose",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q075",
@@ -1178,8 +1178,8 @@
       "marks": 2,
       "page": 16,
       "source_excerpt": "They need mineral elements for normal and healthy growth.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q076",
@@ -1192,8 +1192,8 @@
       "marks": 2,
       "page": 16,
       "source_excerpt": "Mineral elements from the soil enter the roots of plants in the form of solution.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q077",
@@ -1206,8 +1206,8 @@
       "marks": 2,
       "page": 16,
       "source_excerpt": "This is because there are usually fewer minerals in the soil than in the plant cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q078",
@@ -1216,12 +1216,12 @@
       "type": "short",
       "question": "What is the role of magnesium in plants?",
       "options": [],
-      "answer": "Magnesium is used by chlorophyll to capture energy. It is essential to make chlorophyll, which gives green colour to leaves.",
+      "answer": "Magnesium is used by chlorophyll to capture energy. It is essential to make chlorophyll.",
       "marks": 2,
       "page": 17,
       "source_excerpt": "Magnesium is used by chlorophyll to capture energy and nitrates are used by plants to produce protein.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: removed 'gives green colour to leaves' (words cut off in the scan))"
     },
     {
       "id": "ch01-q079",
@@ -1230,12 +1230,12 @@
       "type": "short",
       "question": "What are nitrates? How do plants use them?",
       "options": [],
-      "answer": "Nitrates are nitrogen based compounds. Plants absorb nitrates from the soil and use them to make proteins.",
+      "answer": "Nitrates are nitrogen based compounds. Plants absorb nitrates and use them to make proteins.",
       "marks": 2,
       "page": 17,
       "source_excerpt": "Nitrates are nitrogen based compounds.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: removed 'from the soil' (words cut off in the scan))"
     },
     {
       "id": "ch01-q080",
@@ -1248,8 +1248,8 @@
       "marks": 2,
       "page": 17,
       "source_excerpt": "to increase the yield and growth of crops.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q081",
@@ -1267,8 +1267,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "The broad shape of leaves provide large surface area that receives maximum sunlight.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q082",
@@ -1286,8 +1286,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Inside the leaf, chlorophyll is arranged in thylakoid stacks for receiving maximum energy from sunlight.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q083",
@@ -1305,8 +1305,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "Due to the thin leaf-width, carbon dioxide quickly diffuses into the mesophyll cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q084",
@@ -1324,8 +1324,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "Thick waxy cuticle above epidermis prevents excess loss of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q085",
@@ -1343,8 +1343,8 @@
       "marks": 1,
       "page": 7,
       "source_excerpt": "cells are columnar and lie exactly below the epidermis.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q086",
@@ -1362,8 +1362,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "Therefore, such plants have more thick layers of palisade",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q087",
@@ -1381,8 +1381,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "For gaseous exchange, stomata are present.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q088",
@@ -1395,8 +1395,8 @@
       "marks": 1,
       "page": 13,
       "source_excerpt": "The broad shape of leaves provide large surface area that receives maximum sunlight.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q089",
@@ -1409,8 +1409,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "The large intercellular spaces among spongy mesophyll cells,",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q090",
@@ -1423,8 +1423,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "other words, stomata keep a check on water loss and intake of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q091",
@@ -1437,8 +1437,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "Plants growing in sunny environment have high rate of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q092",
@@ -1451,22 +1451,22 @@
       "marks": 1,
       "page": 7,
       "source_excerpt": "Leaves are the food factories. Their structures facilitate them in making food.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q093",
       "chapter": 1,
       "slo_id": "ch01-slo05",
       "type": "true_false",
-      "question": "The opening and closing of stomata regulates the flow of carbon dioxide.",
+      "question": "Stomata are surrounded by two guard cells.",
       "options": [],
       "answer": "True",
       "marks": 1,
-      "page": 14,
-      "source_excerpt": "two guard cells. Their opening and closing mechanism regulates the",
-      "review_status": "pending",
-      "review_note": ""
+      "page": 7,
+      "source_excerpt": "The lower epidermis contains stomata (special openings for gaseous exchange) surrounded by two guard cells.",
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: old statement relied on 'flow', which is cut off; replaced with a fully visible fact)"
     },
     {
       "id": "ch01-q094",
@@ -1479,8 +1479,8 @@
       "marks": 1,
       "page": 8,
       "source_excerpt": "Among the spongy mesophyll cells, vascular bundles are found.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q095",
@@ -1493,8 +1493,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "The broad shape of leaves provide large surface area that receives maximum sunlight.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q096",
@@ -1507,8 +1507,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "Inside the leaf, chlorophyll is arranged in thylakoid stacks for receiving maximum energy from sunlight.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q097",
@@ -1517,12 +1517,12 @@
       "type": "short",
       "question": "What is the role of stomata in leaves?",
       "options": [],
-      "answer": "Stomata are present for gaseous exchange. Their opening and closing regulates the flow of carbon dioxide and keeps the balance of water in the cells.",
+      "answer": "Stomata are present for gaseous exchange. They maintain the balance of water in the cells.",
       "marks": 2,
       "page": 14,
       "source_excerpt": "For gaseous exchange, stomata are present.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: removed 'flow of carbon dioxide' ('flow' cut off); kept visible words)"
     },
     {
       "id": "ch01-q098",
@@ -1535,8 +1535,8 @@
       "marks": 2,
       "page": 14,
       "source_excerpt": "Thick waxy cuticle above epidermis prevents excess loss of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q099",
@@ -1549,8 +1549,8 @@
       "marks": 2,
       "page": 14,
       "source_excerpt": "Plants growing in sunny environment have high rate of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q100",
@@ -1563,8 +1563,8 @@
       "marks": 2,
       "page": 13,
       "source_excerpt": "Due to the thin leaf-width, carbon dioxide quickly diffuses into the mesophyll cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q101",
@@ -1582,8 +1582,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "The process of cellular respiration begins in the cytoplasm, produces 2 ATP",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q102",
@@ -1601,8 +1601,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "and 2 molecules of pyruvic acid from 1 molecule of glucose.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q103",
@@ -1620,8 +1620,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "In absence of oxygen, pyruvic acid breaks down into lactic acid and produces 2 ATP molecules. It is an anaerobic respiration.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q104",
@@ -1639,8 +1639,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "for the second phase of aerobic respiration called Krebs cycle; it involves",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q105",
@@ -1658,8 +1658,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Aerobic respiration requires oxygen while anaerobic respiration does not require oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q106",
@@ -1677,8 +1677,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "Glucose + Oxygen → Carbon dioxide + Water +",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q107",
@@ -1691,8 +1691,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "Cellular respiration is the production of energy from the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q108",
@@ -1705,8 +1705,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "In the presence of oxygen, this pyruvic acid enters into",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q109",
@@ -1719,8 +1719,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "(glucose) enter into the phloem vessels and reach all the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q110",
@@ -1733,8 +1733,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "series of the chemical reactions and releases energy in the form of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q111",
@@ -1747,8 +1747,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "The process of cellular respiration begins in the cytoplasm, produces 2 ATP",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q112",
@@ -1761,8 +1761,8 @@
       "marks": 1,
       "page": 17,
       "source_excerpt": "Respiration is a process in living organisms involving the production of energy, typically with the intake of oxygen and release of carbon dioxide from the oxidation of complex organic substances.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q113",
@@ -1775,8 +1775,8 @@
       "marks": 1,
       "page": 14,
       "source_excerpt": "and 2 molecules of pyruvic acid from 1 molecule of glucose.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q114",
@@ -1789,8 +1789,8 @@
       "marks": 2,
       "page": 14,
       "source_excerpt": "Cellular respiration is the production of energy from the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q115",
@@ -1803,8 +1803,8 @@
       "marks": 2,
       "page": 14,
       "source_excerpt": "process is called glycolysis.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q116",
@@ -1817,8 +1817,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "In absence of oxygen, pyruvic acid breaks down into lactic acid and produces 2 ATP molecules. It is an anaerobic respiration.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q117",
@@ -1831,8 +1831,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "Glucose + Oxygen → Carbon dioxide + Water +",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q118",
@@ -1845,8 +1845,8 @@
       "marks": 2,
       "page": 17,
       "source_excerpt": "Aerobic respiration requires oxygen while anaerobic respiration does not require oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q119",
@@ -1859,8 +1859,8 @@
       "marks": 2,
       "page": 14,
       "source_excerpt": "from air reaches the cells and takes part in the process of",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q120",
@@ -1878,8 +1878,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "This process takes place in plants only.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q121",
@@ -1897,8 +1897,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "The process occurs in the presence of sunlight in day time only.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q122",
@@ -1916,8 +1916,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "In plants, the dry weight decreases",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q123",
@@ -1935,8 +1935,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "During Photosynthesis plant utilizes carbon dioxide and water and releases oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q124",
@@ -1954,8 +1954,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "They maintain the oxygen-carbon dioxide balance in nature together.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q125",
@@ -1973,8 +1973,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "The process occurs all the time in cells.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q126",
@@ -1987,8 +1987,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "Photosynthesis and respiration are complementary processes to each other.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q127",
@@ -2001,8 +2001,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "This process takes place in all the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q128",
@@ -2015,8 +2015,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "So, carbon dioxide and water are the waste products.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q129",
@@ -2029,8 +2029,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "The process requires energy to make carbohydrates (sugar).",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q130",
@@ -2043,8 +2043,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "In plants, the dry weight increases due to synthesis of food (sugars).",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q131",
@@ -2057,8 +2057,8 @@
       "marks": 1,
       "page": 16,
       "source_excerpt": "Animals use Carbohydrates (C6H12O6) and Oxygen (O2)",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q132",
@@ -2071,8 +2071,8 @@
       "marks": 1,
       "page": 15,
       "source_excerpt": "During Respiration plants utilizes the oxygen and releases carbon dioxide",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q133",
@@ -2085,8 +2085,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "This process takes place in plants only.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q134",
@@ -2099,8 +2099,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "They maintain the oxygen-carbon dioxide balance in nature together.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q135",
@@ -2113,8 +2113,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "In plants, the dry weight increases due to synthesis of food (sugars).",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q136",
@@ -2127,8 +2127,8 @@
       "marks": 2,
       "page": 16,
       "source_excerpt": "Plants produce Carbohydrates (C6H12O6) and Oxygen (O2)",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q137",
@@ -2141,8 +2141,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "So, carbon dioxide and water are the waste products.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q138",
@@ -2155,8 +2155,8 @@
       "marks": 2,
       "page": 15,
       "source_excerpt": "During Photosynthesis plant utilizes carbon dioxide and water and releases oxygen.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q139",
@@ -2174,8 +2174,8 @@
       "marks": 1,
       "page": 9,
       "source_excerpt": "Transpiration is the loss of water from the aerial parts of the plants such",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q140",
@@ -2193,8 +2193,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Rate of transpiration decreases with increase of humidity in the air.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q141",
@@ -2212,8 +2212,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Light Intensity: Light increases the rate of transpiration by opening the stomata.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q142",
@@ -2231,8 +2231,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Air/Wind speed: Rate of transpiration increases with wind speed because the saturated air around the leaves is removed.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q143",
@@ -2250,8 +2250,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Transpiration lowers the temperature of around the plants and causes cooling.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q144",
@@ -2269,8 +2269,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "The rate of transpiration is inversely proportional to the humidity.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q145",
@@ -2283,8 +2283,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Temperature: Increase in temperature decreases the humidity and opens the stomata.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q146",
@@ -2297,8 +2297,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Air/Wind speed: Rate of transpiration increases with wind speed because the saturated air around the leaves is removed.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q147",
@@ -2311,8 +2311,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Transpiration provides minerals and water to all parts of the plant.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q148",
@@ -2325,8 +2325,8 @@
       "marks": 1,
       "page": 12,
       "source_excerpt": "Transpiration maintains the water balance in plants.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q149",
@@ -2339,8 +2339,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Light Intensity: Light increases the rate of transpiration by opening the stomata.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q150",
@@ -2353,8 +2353,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Humidity: Water vapours present in the air affect the rate of transpiration.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q151",
@@ -2367,8 +2367,8 @@
       "marks": 1,
       "page": 9,
       "source_excerpt": "Transpiration is the loss of water from the aerial parts of the plants such",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q152",
@@ -2381,8 +2381,8 @@
       "marks": 2,
       "page": 9,
       "source_excerpt": "Transpiration is the loss of water from the aerial parts of the plants such",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q153",
@@ -2395,8 +2395,8 @@
       "marks": 2,
       "page": 17,
       "source_excerpt": "Different factors like temperature, humidity, wind speed and light intensity affect the rate of transpiration.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q154",
@@ -2409,8 +2409,8 @@
       "marks": 2,
       "page": 11,
       "source_excerpt": "As a result, rate of transpiration increases.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q155",
@@ -2423,8 +2423,8 @@
       "marks": 2,
       "page": 11,
       "source_excerpt": "Transpiration provides minerals and water to all parts of the plant.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q156",
@@ -2433,12 +2433,12 @@
       "type": "short",
       "question": "How does turgidity help the cells of a plant?",
       "options": [],
-      "answer": "Due to the turgidity, the cells perform their functions efficiently and maintain the plant's shape.",
+      "answer": "Due to the turgidity, the cells perform their functions efficiently.",
       "marks": 2,
       "page": 12,
       "source_excerpt": "maintain the plant's shape. Due to the turgidity, the cells perform their functions efficiently.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked (fixed: answer mixed two ideas; now matches the quote exactly)"
     },
     {
       "id": "ch01-q157",
@@ -2451,8 +2451,8 @@
       "marks": 2,
       "page": 11,
       "source_excerpt": "Air/Wind speed: Rate of transpiration increases with wind speed because the saturated air around the leaves is removed.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q158",
@@ -2470,8 +2470,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "the xylem vessels is called transpiration stream.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q159",
@@ -2489,8 +2489,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "Cohesion: Due to forces of attraction, water molecules join",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q160",
@@ -2508,8 +2508,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "Adhesion: the force of attraction between xylem walls and",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q161",
@@ -2527,8 +2527,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Pressure in leaves must be lower than that of roots for water to flow upward.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q162",
@@ -2546,8 +2546,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "phenomenon takes place against gravity.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q163",
@@ -2565,8 +2565,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "molecules cause capillary action and drag water upward in the",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q164",
@@ -2579,8 +2579,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "Two factors or properties promote the transpiration stream:",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q165",
@@ -2593,8 +2593,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "phenomenon takes place against gravity.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q166",
@@ -2607,8 +2607,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "vessels. These two factors along with suction pressure (due to transpiration) develop a continuous column of water in the xylem vessel.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q167",
@@ -2621,8 +2621,8 @@
       "marks": 1,
       "page": 10,
       "source_excerpt": "As a result, water moves upward and reaches the uppermost parts of the plants.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q168",
@@ -2635,8 +2635,8 @@
       "marks": 1,
       "page": 11,
       "source_excerpt": "Pressure in roots must be lower than that of soil for water to absorb.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q169",
@@ -2650,7 +2650,7 @@
       "page": 10,
       "source_excerpt": "water) causing more absorption of water through the roots.",
       "review_status": "pending",
-      "review_note": ""
+      "review_note": "flagged: Simplifies the book: the book says the pressure difference created by transpiration causes more water absorption. Is 'Transpiration causes more absorption of water through the roots' acceptable?"
     },
     {
       "id": "ch01-q170",
@@ -2663,8 +2663,8 @@
       "marks": 2,
       "page": 10,
       "source_excerpt": "the xylem vessels is called transpiration stream.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q171",
@@ -2677,8 +2677,8 @@
       "marks": 2,
       "page": 10,
       "source_excerpt": "Two factors or properties promote the transpiration stream:",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q172",
@@ -2691,8 +2691,8 @@
       "marks": 2,
       "page": 10,
       "source_excerpt": "Cohesion: Due to forces of attraction, water molecules join",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q173",
@@ -2705,8 +2705,8 @@
       "marks": 2,
       "page": 10,
       "source_excerpt": "Adhesion: the force of attraction between xylem walls and",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     },
     {
       "id": "ch01-q174",
@@ -2719,8 +2719,8 @@
       "marks": 2,
       "page": 10,
       "source_excerpt": "As a result, water moves upward and reaches the uppermost parts of the plants.",
-      "review_status": "pending",
-      "review_note": ""
+      "review_status": "approved",
+      "review_note": "self-checked"
     }
   ]
 }
