@@ -13,7 +13,7 @@ licensing. Plan and status: docs/PLAN.md.
 
 ## Truth rules (most important)
 1. The book is the only source. Never use outside knowledge, facts or terms.
-2. Never invent SLOs, topics, terms, page numbers or quotes.
+2. Never invent SLOs, SLO page links, terms, page numbers or quotes.
 3. SLOs come ONLY from data/chXX/slos.json, typed by Izan from the physical book.
 4. If text is cut off, blurry or unclear, write UNREADABLE. Never guess.
 5. Page numbers = printed book page numbers; also store the PDF page index.
@@ -23,10 +23,16 @@ licensing. Plan and status: docs/PLAN.md.
 1. Each question maps to exactly one SLO of its chapter.
 2. Everything comes from the chapter text. No outside terms, jargon or facts.
 3. Short, simple sentences for students with limited English.
-4. Each question stores chapter, topic, SLO id, page, exact source excerpt.
+4. Each question stores chapter, SLO id, page, exact source excerpt.
+   There are NO topics or sub-topics anywhere (ADR 0002): teachers work only with SLOs.
+   The source page must be one of the SLO's pages (data/chXX/slo_pages.json).
 5. MCQ wrong options also use only chapter words.
 6. Every question must pass pipeline/validate_questions.py before it goes in the bank.
 7. Questions are made OFFLINE. The app never calls an AI at runtime; it only picks randomly.
+8. Types: mcq (1 mark), true_false (1 mark), short (2 marks). One book fact gives at
+   most one question per type. Never pad the bank with reworded copies.
+9. The requested count is a target: the app gives at most what the bank holds for the
+   chosen SLOs and says why if fewer.
 
 ## How to work
 - One task from docs/PLAN.md at a time. Check its "done when" test before calling it done.
@@ -37,7 +43,8 @@ licensing. Plan and status: docs/PLAN.md.
 
 ## Code standards
 Python 3.12 (pipeline, PyMuPDF, Pydantic, pytest). Next.js + strict TypeScript +
-Tailwind + shadcn/ui + Zod (app, Vitest, Playwright for PDF). npm, not pnpm.
+Tailwind + shadcn/ui + Zod (app, Vitest). PDF = print CSS + browser "Save as PDF" (no Playwright).
+npm, not pnpm. No unnecessary dependencies.
 Small modules, validate data at boundaries, lint, tests for validator and
 sampling, conventional commits (feat:, fix:, docs:, chore:).
 

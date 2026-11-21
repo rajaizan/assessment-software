@@ -2,78 +2,12 @@
   "chapter": 1,
   "title": "Plant System",
   "source": "Transcribed by Claude from page images; spot-checked by Izan",
-  "topics": [
-    {
-      "id": "1.1",
-      "title": "Tissues in plants",
-      "printed_pages": [
-        2,
-        4
-      ]
-    },
-    {
-      "id": "1.2",
-      "title": "Plant Organs and their Structures",
-      "printed_pages": [
-        4,
-        8
-      ]
-    },
-    {
-      "id": "1.3",
-      "title": "Organ Systems in Plants",
-      "printed_pages": [
-        8,
-        9
-      ]
-    },
-    {
-      "id": "1.4",
-      "title": "Transport System in Plants",
-      "printed_pages": [
-        9,
-        12
-      ]
-    },
-    {
-      "id": "1.5",
-      "title": "Food making in plants – Photosynthesis",
-      "printed_pages": [
-        13,
-        14
-      ]
-    },
-    {
-      "id": "1.6",
-      "title": "Energy Production in Plants (Cellular Respiration)",
-      "printed_pages": [
-        14,
-        15
-      ]
-    },
-    {
-      "id": "1.7",
-      "title": "Comparison Between Photosynthesis and Respiration",
-      "printed_pages": [
-        15,
-        16
-      ]
-    },
-    {
-      "id": "1.8",
-      "title": "Minerals required by plants",
-      "printed_pages": [
-        16,
-        17
-      ]
-    }
-  ],
   "blocks": [
     {
       "id": "ch01-p001-b01",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "heading",
       "text": "Chapter 1",
       "has_gaps": false
@@ -82,7 +16,7 @@
       "id": "ch01-p001-b02",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "heading",
       "text": "Plant System",
       "has_gaps": false
@@ -91,7 +25,7 @@
       "id": "ch01-p001-b03",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "heading",
       "text": "After studying this chapter, students will be able to:",
       "has_gaps": false
@@ -100,7 +34,7 @@
       "id": "ch01-p001-b04",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Explain the root and shoot system in plants. Label different parts of leaf, stem [ar?] root (external and internal structure).",
       "has_gaps": true
@@ -109,7 +43,7 @@
       "id": "ch01-p001-b05",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Predict the role of xylem and phloem in transport of water and food in plants [?] observing the cross section of the stem.",
       "has_gaps": true
@@ -118,7 +52,7 @@
       "id": "ch01-p001-b06",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Define the process of photosynthesis and derive word equation for it.",
       "has_gaps": false
@@ -127,7 +61,7 @@
       "id": "ch01-p001-b07",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Know that plants require minerals to maintain healthy growth and life [process?] (limited to magnesium to make chlorophyll and nitrates to make protein).",
       "has_gaps": true
@@ -136,7 +70,7 @@
       "id": "ch01-p001-b08",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Explain that the structure of leaves is adapted to the process of photosynthesis.",
       "has_gaps": false
@@ -145,7 +79,7 @@
       "id": "ch01-p001-b09",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Describe the process of respiration and write word equation for it.",
       "has_gaps": false
@@ -154,7 +88,7 @@
       "id": "ch01-p001-b10",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Compare and contrast the process of photosynthesis and respiration.",
       "has_gaps": false
@@ -163,7 +97,7 @@
       "id": "ch01-p001-b11",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Investigate the phenomenon of transpiration and its importance in plants [(win?] temperature, light, humidity affecting rate of transpiration in plants).",
       "has_gaps": true
@@ -172,7 +106,7 @@
       "id": "ch01-p001-b12",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "list_item",
       "text": "Explore and apply natural raise of water based on the principle of transpiration.",
       "has_gaps": false
@@ -181,7 +115,7 @@
       "id": "ch01-p001-b13",
       "printed_page": 1,
       "pdf_page": 4,
-      "section": "intro",
+      "part": "slo_list",
       "kind": "figure",
       "text": "LEAF ANATOMY / INTERNAL STEM STRUCTURE / INTERNAL ROOT STRUCTURE",
       "has_gaps": false
@@ -190,7 +124,7 @@
       "id": "ch01-p002-b01",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "intro",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?he] previous grade, we have learnt the cellular hierarchy that tells us [?ut] the organization of the living organisms. In this grade, we will study [?ue], organ and organ system level of plants. The study will help us to [?nprehend] how the structure of plant organs facilitates the crucial [?cesses] such as transpiration, photosynthesis and respiration.",
       "has_gaps": true
@@ -199,7 +133,7 @@
       "id": "ch01-p002-b02",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "intro",
+      "part": "content",
       "kind": "heading",
       "text": "A. Tissues, Organs and Organ Systems",
       "has_gaps": false
@@ -208,7 +142,7 @@
       "id": "ch01-p002-b03",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "1.1",
+      "part": "content",
       "kind": "heading",
       "text": "[?1] Tissues in plants",
       "has_gaps": true
@@ -217,7 +151,7 @@
       "id": "ch01-p002-b04",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "1.1",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?] A group of cells with similar structure makes tissues and [?forms] the same task. There are three types of tissues in [?nts] on the basis of their functions i.e. dermal tissues, [?und] tissues and vascular tissues.",
       "has_gaps": true
@@ -226,7 +160,7 @@
       "id": "ch01-p002-b05",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "1.1",
+      "part": "content",
       "kind": "heading",
       "text": "[?] Dermal Tissue",
       "has_gaps": true
@@ -235,7 +169,7 @@
       "id": "ch01-p002-b06",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "1.1",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?] Dermal tissues form the protective covering of the plant organs. They [?] present at periphery of root, stem and leaves. The cells of the dermal [?ues] are epidermal cells, stomata and trichomes. In leaves, they control [?] gaseous exchange through stomata. In stem and roots, epidermal cells [?end] into trichomes. Trichomes are very thin and small hair like extensions [?bsorb] more water (roots) and protect the plants against herbivores. The [?mal] tissues in leaves and stems are protected by waxy cuticle.",
       "has_gaps": true
@@ -244,7 +178,7 @@
       "id": "ch01-p002-b07",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "1.1",
+      "part": "content",
       "kind": "heading",
       "text": "[?] Ground Tissues",
       "has_gaps": true
@@ -253,7 +187,7 @@
       "id": "ch01-p002-b08",
       "printed_page": 2,
       "pdf_page": 5,
-      "section": "1.1",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?] The layers of cells next to dermal tissues are that of ground tissues. [?und] tissues are supporting tissues that provide supportive matrix for [?cular] tissues, store food and water. The cells of ground tissues are made [?] of parenchyma cells, collenchyma cells and sclerenchyma cells. [?enchyma] cells are photosynthetic in leaves while store food in the roots. [?llenchyma] cells support the shoot when there is active growth, [?erenchyma] cells support the shoot in the areas where growth has ceased.",
       "has_gaps": true
@@ -262,7 +196,7 @@
       "id": "ch01-p003-b01",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "figure",
       "text": "Intercellular air space / Nucleus / Vacuole / Cytoplasm — Fig. 1.1 (a) Parenchyma cells",
       "has_gaps": false
@@ -271,7 +205,7 @@
       "id": "ch01-p003-b02",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "figure",
       "text": "Fig. 1.1 (b) Collenchyma cells",
       "has_gaps": false
@@ -280,7 +214,7 @@
       "id": "ch01-p003-b03",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "figure",
       "text": "Thick secondary cell wall / Thin primary cell wall / [L?] — Fig. 1.1 (c) [Sclerenchym?] cells",
       "has_gaps": true
@@ -289,7 +223,7 @@
       "id": "ch01-p003-b04",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "heading",
       "text": "iii. Vascular Tissues",
       "has_gaps": false
@@ -298,7 +232,7 @@
       "id": "ch01-p003-b05",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "paragraph",
       "text": "Vascular tissues are called conducting tissues. They are found in between the dermal and ground tissues. They are of two types:",
       "has_gaps": false
@@ -307,7 +241,7 @@
       "id": "ch01-p003-b06",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Do you know?] Why do xylem and [phlo?] always lie adjacent to each [oth?]",
       "has_gaps": true
@@ -316,7 +250,7 @@
       "id": "ch01-p003-b07",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "list_item",
       "text": "a. Xylem tissues: Xylem tissues conduct water and dissolve [mine?] throughout the plant. They are composed of xylem vessels and [trach?] cells.",
       "has_gaps": true
@@ -325,7 +259,7 @@
       "id": "ch01-p003-b08",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "list_item",
       "text": "b. Phloem tissues: Phloem tissues conduct food throughout the [pl?] They are composed of sieve tubes, companion cells, and supportive [c?]",
       "has_gaps": true
@@ -334,7 +268,7 @@
       "id": "ch01-p003-b09",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "figure",
       "text": "Tracheids / One-way only / Water and minerals / No end walls between cells / Thick walls stiffened with lignin — Fig. 1.2 (a) Xylem tissue",
       "has_gaps": false
@@ -343,7 +277,7 @@
       "id": "ch01-p003-b10",
       "printed_page": 3,
       "pdf_page": 6,
-      "section": "1.1",
+      "part": "content",
       "kind": "figure",
       "text": "[Companion cell?] / [Food storage ce?] / Two-way flow / [Water and foo?] / [Cells have end?] [with perforatio?] — Fig. 1.2 (b) Phloem tissue",
       "has_gaps": true
@@ -352,7 +286,7 @@
       "id": "ch01-p004-b01",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.1",
+      "part": "content",
       "kind": "box",
       "text": "[BOX [?Independent Activity # 1] Xylem and Phloem Model] Using a paper cup, a toilet paper tube, a set of thin white straws and a set of thick, coloured straws, arrange a model of the inside of a plant. The paper cup can represent the outer bark of the plant. Within the paper cup, arrange the toilet paper tube so that it is in the center. Outside the toilet paper tube, arrange the thick, coloured straws to represent phloem, and the thin white straws should be placed inside the tube to represent xylem.",
       "has_gaps": true
@@ -361,7 +295,7 @@
       "id": "ch01-p004-b02",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.1",
+      "part": "content",
       "kind": "figure",
       "text": "Bark / Xylem & Phloem / Heartwood / Old Xylem & Phloem",
       "has_gaps": false
@@ -370,7 +304,7 @@
       "id": "ch01-p004-b03",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.1",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Supervised Activity] Draw a table with two columns on a chart, and label one column as 'Xylem' and the other as 'Phloem'. Write down different features and functions of xylem and phloem separately on sticky notes, so that one sticky note has only one feature/ function of either xylem or phloem written on them. Have the students come up to the chart one-by-one. Each learner should correctly identify the feature/function written on the sticky note and paste it in the relevant column.",
       "has_gaps": false
@@ -379,7 +313,7 @@
       "id": "ch01-p004-b04",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "1.2 Plant Organs and their Structures",
       "has_gaps": false
@@ -388,7 +322,7 @@
       "id": "ch01-p004-b05",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "Roots, stem and leaves are major plant organs.",
       "has_gaps": false
@@ -397,7 +331,7 @@
       "id": "ch01-p004-b06",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "i. Roots",
       "has_gaps": false
@@ -406,7 +340,7 @@
       "id": "ch01-p004-b07",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "The structure and arrangement of tissues in roots facilitate the functions of the root i.e. hold the plant firmly in soil and absorb water and nutrients from the soil and conduct it to the stem.",
       "has_gaps": false
@@ -415,7 +349,7 @@
       "id": "ch01-p004-b08",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "figure",
       "text": "Fig. 1.3 Branch system of roots",
       "has_gaps": false
@@ -424,7 +358,7 @@
       "id": "ch01-p004-b09",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "External structure",
       "has_gaps": false
@@ -433,7 +367,7 @@
       "id": "ch01-p004-b10",
       "printed_page": 4,
       "pdf_page": 7,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "In dicot plants, the root that arises from radical is called primary or [ta?]",
       "has_gaps": true
@@ -442,7 +376,7 @@
       "id": "ch01-p005-b01",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?oot]. The subsequent branches of tap root [?re] called secondary roots and so on. [?ach] root has root hair and root cap. In [?onocot] plants, roots arise from the stem [?aterally] or from the hypocotyl. They are [?alled] fibrous roots.",
       "has_gaps": true
@@ -451,7 +385,7 @@
       "id": "ch01-p005-b02",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "figure",
       "text": "Fig. 1.4 (a) Taproot, (b) Fibrous [root?]",
       "has_gaps": true
@@ -460,7 +394,7 @@
       "id": "ch01-p005-b03",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "[?nternal] structure of root",
       "has_gaps": true
@@ -469,7 +403,7 @@
       "id": "ch01-p005-b04",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "Root being an organ has specific [?rrangement] of different tissues in [?ubsequent] layers. These are discussed below:",
       "has_gaps": true
@@ -478,7 +412,7 @@
       "id": "ch01-p005-b05",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Epidermis: It is the outermost protective layer. The cells have [no?] [?ntercellular] spaces. It gives rise to root hair.",
       "has_gaps": true
@@ -487,7 +421,7 @@
       "id": "ch01-p005-b06",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Cortex: Cortex is a region that contains multiple layers of cells that [?onduct] water from epidermis to the inner layers of cells.",
       "has_gaps": true
@@ -496,7 +430,7 @@
       "id": "ch01-p005-b07",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Endodermis: Next to cortex, single or two layers of cells known as [?ndodermis]. Their cells lack intra-cellular spaces. It controls water transport. [?] surrounds central region known as stele.",
       "has_gaps": true
@@ -505,7 +439,7 @@
       "id": "ch01-p005-b08",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Pericycle/cambium: The single layer of cells next to endodermis is [?alled] pericycle. It develops lateral roots and provides support to vascular [?issues].",
       "has_gaps": true
@@ -514,7 +448,7 @@
       "id": "ch01-p005-b09",
       "printed_page": 5,
       "pdf_page": 8,
-      "section": "1.2",
+      "part": "content",
       "kind": "figure",
       "text": "Cortex / Phloem / Endodermis / Stele / Xylem / Epidermis / Pericycle/cambium — Fig. 1.5 Internal structure of dicot root",
       "has_gaps": false
@@ -523,7 +457,7 @@
       "id": "ch01-p006-b01",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Vascular bundle: Vascular bundle (xylem and phloem) are located [?ntrally] to withstand stretching forces and conduct water and food [?spectively].",
       "has_gaps": true
@@ -532,7 +466,7 @@
       "id": "ch01-p006-b02",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Pith: Pith is the central region in roots. In dicots, it is less prominent or [?most] absent. Its cells have large intercellular spaces and store food.",
       "has_gaps": true
@@ -541,7 +475,7 @@
       "id": "ch01-p006-b03",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Interesting information] [?he] structure of monocot root is slightly different from that of dicot roots. Such as, in [?onocot] roots: [?] Cortex is narrow and composed of only parenchymatous cells. [?i.] Endodermis is thicker. iii. Cambium is absent. [?v.] Pericycle may be double layered. [?] Number of vascular bundle is greater than 6. vi. Pith is prominent.",
       "has_gaps": true
@@ -550,7 +484,7 @@
       "id": "ch01-p006-b04",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "[?] Stem",
       "has_gaps": true
@@ -559,7 +493,7 @@
       "id": "ch01-p006-b05",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "[?he] External Structure of the Stem",
       "has_gaps": true
@@ -568,7 +502,7 @@
       "id": "ch01-p006-b06",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "A stem has nodes, internodes, and scars externally. The [?uter] surface of woody stems is hard and dead. It is known as [?ark].",
       "has_gaps": true
@@ -577,7 +511,7 @@
       "id": "ch01-p006-b07",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "[?he] Internal Structure of Stem",
       "has_gaps": true
@@ -586,7 +520,7 @@
       "id": "ch01-p006-b08",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "Internal structure has the [?llowing] basic features:",
       "has_gaps": true
@@ -595,7 +529,7 @@
       "id": "ch01-p006-b09",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Epidermis: It is the outermost [?ngle] layer of the cells with no [?ter-cellular] spaces. It may [?ontain] stomata for gaseous [?change]. It is protected by a thick [?yer] called cuticle.",
       "has_gaps": true
@@ -604,7 +538,7 @@
       "id": "ch01-p006-b10",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "figure",
       "text": "Epidermis / Xylem / Cortex / Cambium / Pith / Phloem — Fig. 1.6 Internal structure of stem",
       "has_gaps": false
@@ -613,7 +547,7 @@
       "id": "ch01-p006-b11",
       "printed_page": 6,
       "pdf_page": 9,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Cortex: It is the region next to epidermis and is divided into following layers.",
       "has_gaps": true
@@ -622,7 +556,7 @@
       "id": "ch01-p007-b01",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "i. Hypodermis: It is multicellular and attached with epidermis. It [h?] chlorophyll and can synthesize food.",
       "has_gaps": true
@@ -631,7 +565,7 @@
       "id": "ch01-p007-b02",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "ii. General Cortex: The cells in general cortex have [inter-cellul?] spaces and store food prepared by hypodermis.",
       "has_gaps": true
@@ -640,7 +574,7 @@
       "id": "ch01-p007-b03",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "list_item",
       "text": "3. Vascular Tissue: They are arranged in a ring around the pith. [T?] xylem faces towards the pith while phloem faces towards the pericycle. [Bo?] tissues are separated by vascular cambium.",
       "has_gaps": true
@@ -649,7 +583,7 @@
       "id": "ch01-p007-b04",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Independent Activity # 2] Just like monocot roots, the structure of monocot stem is different. Go to the library [o?] search on internet and find out the differences between monocot and dicot stems.",
       "has_gaps": true
@@ -658,7 +592,7 @@
       "id": "ch01-p007-b05",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "iii. Leaves",
       "has_gaps": false
@@ -667,7 +601,7 @@
       "id": "ch01-p007-b06",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "Leaves are the food factories. Their structures facilitate them in making food.",
       "has_gaps": false
@@ -676,7 +610,7 @@
       "id": "ch01-p007-b07",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "heading",
       "text": "Internal structure of a leaf",
       "has_gaps": false
@@ -685,7 +619,7 @@
       "id": "ch01-p007-b08",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "The internal structure of a leaf has three distinct layers of cells such as epidermis, mesophyll, and vascular bundles. The epidermis is the uppermost and the lowermost layer of a leaf. It is protected by a waxy layer called the cuticle. The lower epidermis contains stomata (special openings for gaseous exchange) surrounded by two guard cells.",
       "has_gaps": false
@@ -694,7 +628,7 @@
       "id": "ch01-p007-b09",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "figure",
       "text": "Apex / Margin / Veins / Midrib / Base / [Bl?] / Petiole / Stipule — Fig. 1.7 External structure of leaf",
       "has_gaps": true
@@ -703,7 +637,7 @@
       "id": "ch01-p007-b10",
       "printed_page": 7,
       "pdf_page": 10,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "The layer below the epidermis is of mesophyll. The mesophyll is ground tissue that consists of two types of parenchymatous cells such [?] palisade mesophyll cells and spongy mesophyll cells. Palisade [mesoph?] cells are columnar and lie exactly below the epidermis. They have [?]",
       "has_gaps": true
@@ -712,7 +646,7 @@
       "id": "ch01-p008-b01",
       "printed_page": 8,
       "pdf_page": 11,
-      "section": "1.2",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?intercellular spaces among them. Spongy mesophyll cells lie below ?] palisade mesophylls cells. They have intercellular spaces and [irregu?] shapes. Due to the intercellular spaces, they have been named ['Spon?] cells. Among the spongy mesophyll cells, vascular bundles are found. [The?] are the long tubes of the xylem and phloem extending from the [vascu?] bundles of the stem.",
       "has_gaps": true
@@ -721,7 +655,7 @@
       "id": "ch01-p008-b02",
       "printed_page": 8,
       "pdf_page": 11,
-      "section": "1.2",
+      "part": "content",
       "kind": "figure",
       "text": "Cuticle / Upper epidermis / Palisade mesophyll cells / Spongy mesophyll cells / Lower epidermis / Guard cells / Vascular Bundles: Xylem, Phloem / Air spaces / Stomata — Fig. 1.8 Internal structure of leaf",
       "has_gaps": false
@@ -730,7 +664,7 @@
       "id": "ch01-p008-b03",
       "printed_page": 8,
       "pdf_page": 11,
-      "section": "1.3",
+      "part": "content",
       "kind": "heading",
       "text": "1.3 Organ Systems in Plants",
       "has_gaps": false
@@ -739,7 +673,7 @@
       "id": "ch01-p008-b04",
       "printed_page": 8,
       "pdf_page": 11,
-      "section": "1.3",
+      "part": "content",
       "kind": "paragraph",
       "text": "A plant has two major organ systems: root system and shoot system.",
       "has_gaps": false
@@ -748,7 +682,7 @@
       "id": "ch01-p008-b05",
       "printed_page": 8,
       "pdf_page": 11,
-      "section": "1.3",
+      "part": "content",
       "kind": "paragraph",
       "text": "The root system anchors plants into the soil; absorbs nutrients and water from the soil. Moreover, it provides a shelter to nitrogen-fixing bacteria to provide nitrogen to plants. The [sho?] system produces fruit and seeds, which transfer their characteristics [?] features to new plants. Moreover, it prepares food for whole of the [pl?] through photosynthesis.",
       "has_gaps": true
@@ -757,7 +691,7 @@
       "id": "ch01-p008-b06",
       "printed_page": 8,
       "pdf_page": 11,
-      "section": "1.3",
+      "part": "content",
       "kind": "paragraph",
       "text": "The shoot system grows positively towards light while root [syst?] grows positively towards gravity. The internal structures of [org?]",
       "has_gaps": true
@@ -766,7 +700,7 @@
       "id": "ch01-p009-b01",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.3",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?] both systems facilitate the energy and food production processes i.e. [?pirations] and photosynthesis respectively.",
       "has_gaps": true
@@ -775,7 +709,7 @@
       "id": "ch01-p009-b02",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.3",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Fig. 1.9 label] [?] Shoot system: Grows above [?] ground. Its organs are stem, [?ves], flowers, fruit and nodes.",
       "has_gaps": true
@@ -784,7 +718,7 @@
       "id": "ch01-p009-b03",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.3",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Fig. 1.9 label] [?] Root system: Lies below the [?und]. Its organs are primary root [?d] its branches i.e. secondary, [?tiary], quaternary roots and root [?irs].",
       "has_gaps": true
@@ -793,7 +727,7 @@
       "id": "ch01-p009-b04",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.3",
+      "part": "content",
       "kind": "figure",
       "text": "Terminal bud / Axillary bud / Blade / Petiole / Leaf / Flower / Internode / Node / Stem / Shoot system / Root system — Fig. 1.9 Root and shoot systems of plants",
       "has_gaps": false
@@ -802,7 +736,7 @@
       "id": "ch01-p009-b05",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "B. Systems and Processes in Plants",
       "has_gaps": false
@@ -811,7 +745,7 @@
       "id": "ch01-p009-b06",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "There are many processes taking place in plants. These [?] necessary to keep plants alive. The major systems are [?nsportation] system, food and energy production systems. [?re] we will study these systems in detail.",
       "has_gaps": true
@@ -820,7 +754,7 @@
       "id": "ch01-p009-b07",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "[?4] Transport System in Plants",
       "has_gaps": true
@@ -829,7 +763,7 @@
       "id": "ch01-p009-b08",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "Transport system in plants serves the two purposes: i.e.",
       "has_gaps": false
@@ -838,7 +772,7 @@
       "id": "ch01-p009-b09",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "It absorbs and transports water and minerals. It is called transpiration.",
       "has_gaps": false
@@ -847,7 +781,7 @@
       "id": "ch01-p009-b10",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "It distributes food from leaves to all other parts. It is called translocation.",
       "has_gaps": false
@@ -856,7 +790,7 @@
       "id": "ch01-p009-b11",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "[?4.1] Transpiration (Movement of water)",
       "has_gaps": true
@@ -865,7 +799,7 @@
       "id": "ch01-p009-b12",
       "printed_page": 9,
       "pdf_page": 12,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "Transpiration is the loss of water from the aerial parts of the plants such [?] leaves and stems. As a result, new water is absorbed from the soil by the [?ots]. It creates a pressure difference between the root (high pressure due to",
       "has_gaps": true
@@ -874,7 +808,7 @@
       "id": "ch01-p010-b01",
       "printed_page": 10,
       "pdf_page": 13,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?top line cut: ... (low pressure due to the release ... ?] water) causing more absorption of water through the roots. [T?] phenomenon takes place against gravity. The upward movement of [wate?] the xylem vessels is called transpiration stream.",
       "has_gaps": true
@@ -883,7 +817,7 @@
       "id": "ch01-p010-b02",
       "printed_page": 10,
       "pdf_page": 13,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "Two factors or properties promote the transpiration stream:",
       "has_gaps": false
@@ -892,7 +826,7 @@
       "id": "ch01-p010-b03",
       "printed_page": 10,
       "pdf_page": 13,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "i. Cohesion: Due to forces of attraction, water molecules join [togeth?] and drag themselves up in the xylem column.",
       "has_gaps": true
@@ -901,7 +835,7 @@
       "id": "ch01-p010-b04",
       "printed_page": 10,
       "pdf_page": 13,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "ii. Adhesion: the force of attraction between xylem walls and [wa?] molecules cause capillary action and drag water upward in the [xyl?] vessels. These two factors along with suction pressure (due to transpiration) develop a continuous column of water in the xylem vessel. As a result, water moves upward and reaches the uppermost parts of the plants.",
       "has_gaps": true
@@ -910,7 +844,7 @@
       "id": "ch01-p010-b05",
       "printed_page": 10,
       "pdf_page": 13,
-      "section": "1.4",
+      "part": "content",
       "kind": "figure",
       "text": "Heartwood / Radial ring: Xylem / Living Phloem / Periderm (Cork) / Vascular cambium / Sapwood — Fig. 1.10 Cross section of stem",
       "has_gaps": false
@@ -919,7 +853,7 @@
       "id": "ch01-p010-b06",
       "printed_page": 10,
       "pdf_page": 13,
-      "section": "1.4",
+      "part": "content",
       "kind": "figure",
       "text": "Cuticle / Leaf epidermis / Guard cells / Stomata / H2O / xylem / Soil Particles / Root hair / Root epidermis / Root cortex / Transpiration — Fig. 1.11 Transpiration in plants",
       "has_gaps": false
@@ -928,7 +862,7 @@
       "id": "ch01-p011-b01",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "[?ctors] Affecting Transpiration in Plants",
       "has_gaps": true
@@ -937,7 +871,7 @@
       "id": "ch01-p011-b02",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "Rate of transpiration is affected by the following [?vironmental] factors.",
       "has_gaps": true
@@ -946,7 +880,7 @@
       "id": "ch01-p011-b03",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Humidity: Water vapours present in the air affect the rate of transpiration. The rate of transpiration is inversely proportional to the humidity. Rate of transpiration decreases with increase of humidity in the air.",
       "has_gaps": true
@@ -955,7 +889,7 @@
       "id": "ch01-p011-b04",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Temperature: Increase in temperature decreases the humidity and opens the stomata. As a result, rate of transpiration increases.",
       "has_gaps": true
@@ -964,7 +898,7 @@
       "id": "ch01-p011-b05",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Light Intensity: Light increases the rate of transpiration by opening the stomata.",
       "has_gaps": true
@@ -973,7 +907,7 @@
       "id": "ch01-p011-b06",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Air/Wind speed: Rate of transpiration increases with wind speed because the saturated air around the leaves is removed.",
       "has_gaps": true
@@ -982,7 +916,7 @@
       "id": "ch01-p011-b07",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "figure",
       "text": "Pressure in leaves must be lower than that of roots for water to flow upward. / Atmospheric water vapour / Atmosphere / Leaf / Transpiration / Transport of water to leaf / (a) Transport from root to leaf / Pressure in roots must be lower than that of soil for water to absorb. / Root / Soil / H2O / For transpiration to occur, atmospheric condition must be lower than that of a leaf. / (b) Transpiration — Fig. 1.12 Internal factors that affect the rate of transpiration",
       "has_gaps": false
@@ -991,7 +925,7 @@
       "id": "ch01-p011-b08",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "[?nportance] of Transpiration",
       "has_gaps": true
@@ -1000,7 +934,7 @@
       "id": "ch01-p011-b09",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "[?e] significance of transpiration for the plant has been discussed below:",
       "has_gaps": true
@@ -1009,7 +943,7 @@
       "id": "ch01-p011-b10",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Transpiration provides minerals and water to all parts of the plant.",
       "has_gaps": true
@@ -1018,7 +952,7 @@
       "id": "ch01-p011-b11",
       "printed_page": 11,
       "pdf_page": 14,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Transpiration lowers the temperature of around the plants and causes cooling.",
       "has_gaps": true
@@ -1027,7 +961,7 @@
       "id": "ch01-p012-b01",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?top line cut: ... Transpiration keeps the cells hydrated and turgid, thus helping to ?] maintain the plant's shape. Due to the turgidity, the cells perform their functions efficiently.",
       "has_gaps": true
@@ -1036,7 +970,7 @@
       "id": "ch01-p012-b02",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?v.] Transpiration maintains the water balance in plants.",
       "has_gaps": true
@@ -1045,7 +979,7 @@
       "id": "ch01-p012-b03",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "1.4.2 Translocation (Movement of food)",
       "has_gaps": false
@@ -1054,7 +988,7 @@
       "id": "ch01-p012-b04",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "The food prepared by leaves is transported through [?hloem]. This process is known as translocation. Let us study [?e] structure of phloem.",
       "has_gaps": true
@@ -1063,7 +997,7 @@
       "id": "ch01-p012-b05",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "heading",
       "text": "[?tructure] of Phloem Vessels",
       "has_gaps": true
@@ -1072,7 +1006,7 @@
       "id": "ch01-p012-b06",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "Phloem tissues consists of two main types of cells.",
       "has_gaps": false
@@ -1081,7 +1015,7 @@
       "id": "ch01-p012-b07",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] The sieve tubes: They conduct food and have perforations to filter impurities and regulate the smooth flow of the food.",
       "has_gaps": true
@@ -1090,7 +1024,7 @@
       "id": "ch01-p012-b08",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?] Companion cells: They are attached to sieve tubes. They are parenchyma in nature. They receive food from the leaves and store them until needed.",
       "has_gaps": true
@@ -1099,7 +1033,7 @@
       "id": "ch01-p012-b09",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "list_item",
       "text": "[?i.] Supportive cells: These cells are sclerenchyma in nature. They are known as fibers and sclereids.",
       "has_gaps": true
@@ -1108,7 +1042,7 @@
       "id": "ch01-p012-b10",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "figure",
       "text": "Sieve pore / Companion cell / Phloem parenchyma / Sieve tube element — Fig. 1.13 Phloem tissue",
       "has_gaps": false
@@ -1117,7 +1051,7 @@
       "id": "ch01-p012-b11",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "paragraph",
       "text": "Phloem vessels build up pressure inside [?nd] force the dissolved food materials to move to other parts. At destination [?oots], stem, flower, fruit, branches), food is released out of the phloem.",
       "has_gaps": true
@@ -1126,7 +1060,7 @@
       "id": "ch01-p012-b12",
       "printed_page": 12,
       "pdf_page": 15,
-      "section": "1.4",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Independent Activity # 3] [?ivide] students into groups and ask each group to paint the diagrams of xylem and [?hloem] and mention in detail the each step of the transport process alongside the [?iagrams].",
       "has_gaps": true
@@ -1135,7 +1069,7 @@
       "id": "ch01-p013-b01",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "heading",
       "text": "1.5 Food making in plants – Photosynthesis",
       "has_gaps": false
@@ -1144,7 +1078,7 @@
       "id": "ch01-p013-b02",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "paragraph",
       "text": "As you know, plants prepare their food themselves. Food making is a multi-step process. It takes place in leaves mainly, where chloroplast is present. The chloroplast contains a green pigment called chlorophyll. It traps heat and light from the sun rays falling over it. Carbon dioxide (air) enters into the leaf cells through stomata and the xylem cells provide water.",
       "has_gaps": false
@@ -1153,7 +1087,7 @@
       "id": "ch01-p013-b03",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "paragraph",
       "text": "In the presence of sunlight, and chlorophyl carbon dioxide and [wat?] react and make glucose and oxygen. Glucose is the food of plants. [Oxygen?] a by-product of this reaction and is released from the plants [throu?] stomata. The whole process is called photosynthesis. It is defined as [\"t?] process by which green plants transform light energy into chemical [ener?] using carbon dioxide and water.\" The process is summarized in the [giv?] word equation:",
       "has_gaps": true
@@ -1162,7 +1096,7 @@
       "id": "ch01-p013-b04",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "paragraph",
       "text": "Carbon dioxide + water —(Light / Chlorophyll)→ glucose + oxygen.",
       "has_gaps": false
@@ -1171,7 +1105,7 @@
       "id": "ch01-p013-b05",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "paragraph",
       "text": "Light is written above the arrow because it does not take part in [t?] reaction. It just triggers the reaction.",
       "has_gaps": true
@@ -1180,7 +1114,7 @@
       "id": "ch01-p013-b06",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "heading",
       "text": "Adaptations of Leaves for Photosynthesis",
       "has_gaps": false
@@ -1189,7 +1123,7 @@
       "id": "ch01-p013-b07",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "paragraph",
       "text": "Leaves are the food factories. Their structure is adapted [f?] photosynthesis, such as:",
       "has_gaps": true
@@ -1198,7 +1132,7 @@
       "id": "ch01-p013-b08",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "i. The broad shape of leaves provide large surface area that receives maximum sunlight.",
       "has_gaps": false
@@ -1207,7 +1141,7 @@
       "id": "ch01-p013-b09",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "ii. Due to the thin leaf-width, carbon dioxide quickly diffuses into the mesophyll cells.",
       "has_gaps": false
@@ -1216,7 +1150,7 @@
       "id": "ch01-p013-b10",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "iii. Inside the leaf, chlorophyll is arranged in thylakoid stacks for receiving maximum energy from sunlight.",
       "has_gaps": false
@@ -1225,7 +1159,7 @@
       "id": "ch01-p013-b11",
       "printed_page": 13,
       "pdf_page": 16,
-      "section": "1.5",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Interesting information] If photosynthesis would stop, [the?] there would be a very few [survivi?] organisms on the Earth because it [?] the only known mechanism [throu?] which inorganic [compoun?] (carbon dioxide and water) turn [?] to organic compound.",
       "has_gaps": true
@@ -1234,7 +1168,7 @@
       "id": "ch01-p014-b01",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "[?iv.] [?top line cut: The closely packed arrangement of palisade mesophyll cells prevent an?] loss of diffused carbon dioxide and light energy.",
       "has_gaps": true
@@ -1243,7 +1177,7 @@
       "id": "ch01-p014-b02",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "[?v.] For gaseous exchange, stomata are present. Each stoma surrounds [b?] two guard cells. Their opening and closing mechanism regulates the [flo?] of carbon dioxide and maintains the balance of water in the cells. [I?] other words, stomata keep a check on water loss and intake of [carbo?] dioxide",
       "has_gaps": true
@@ -1252,7 +1186,7 @@
       "id": "ch01-p014-b03",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "[?vi.] The large intercellular spaces among spongy mesophyll cells, [allo?] gaseous exchange.",
       "has_gaps": true
@@ -1261,7 +1195,7 @@
       "id": "ch01-p014-b04",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "[?vii.] Thick waxy cuticle above epidermis prevents excess loss of [wate?] through evaporation.",
       "has_gaps": true
@@ -1270,7 +1204,7 @@
       "id": "ch01-p014-b05",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.5",
+      "part": "content",
       "kind": "list_item",
       "text": "[?viii.] Plants growing in sunny environment have high rate of [photosynthesis?] Therefore, such plants have more thick layers of palisade [mesophyll?] cells.",
       "has_gaps": true
@@ -1279,7 +1213,7 @@
       "id": "ch01-p014-b06",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.5",
+      "part": "content",
       "kind": "box",
       "text": "[BOX Independent Activity # 4] Prepare 'plant food' using old banana peels. Bury the peels in a hole, a few inches below the surface next to plants like rose bushes or other that require high levels of potassium. Discuss the importance of food in plants and humans and how food will be transported in plants.",
       "has_gaps": false
@@ -1288,7 +1222,7 @@
       "id": "ch01-p014-b07",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.6",
+      "part": "content",
       "kind": "heading",
       "text": "[?1.6] Energy Production in Plants (Cellular Respiration)",
       "has_gaps": true
@@ -1297,7 +1231,7 @@
       "id": "ch01-p014-b08",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "Cellular respiration is the production of energy from the [?lucose] produced during photosynthesis. In plants, the food [?olecules] (glucose) enter into the phloem vessels and reach all the [?ells] of the plants. The oxygen produced in photosynthesis or [?aking] from air reaches the cells and takes part in the process of [?ellular] respiration.",
       "has_gaps": true
@@ -1306,7 +1240,7 @@
       "id": "ch01-p014-b09",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "The process of cellular respiration begins in the cytoplasm, produces 2 ATP [?olecules] and 2 molecules of pyruvic acid from 1 molecule of glucose. [?his] process is called glycolysis.",
       "has_gaps": true
@@ -1315,7 +1249,7 @@
       "id": "ch01-p014-b10",
       "printed_page": 14,
       "pdf_page": 17,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "Glucose → 2 Pyruvic acid + 2 ATD.",
       "has_gaps": false
@@ -1324,7 +1258,7 @@
       "id": "ch01-p015-b01",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "In absence of oxygen, pyruvic acid breaks down into lactic acid and produces 2 ATP molecules. It is an anaerobic respiration.",
       "has_gaps": false
@@ -1333,7 +1267,7 @@
       "id": "ch01-p015-b02",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "2 Pyruvic acid → Lactic acid + + 2 ATP.",
       "has_gaps": false
@@ -1342,7 +1276,7 @@
       "id": "ch01-p015-b03",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "In the presence of oxygen, this pyruvic acid enters into [mitochondri?] for the second phase of aerobic respiration called Krebs cycle; it involves [?] series of the chemical reactions and releases energy in the form of [34-?] ATP molecules.",
       "has_gaps": true
@@ -1351,7 +1285,7 @@
       "id": "ch01-p015-b04",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.6",
+      "part": "content",
       "kind": "paragraph",
       "text": "Glucose + Oxygen → Carbon dioxide + Water + [34-36 A?]",
       "has_gaps": true
@@ -1360,7 +1294,7 @@
       "id": "ch01-p015-b05",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "heading",
       "text": "1.7 Comparison Between Photosynthesis and [Respirati?]",
       "has_gaps": true
@@ -1369,7 +1303,7 @@
       "id": "ch01-p015-b06",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "paragraph",
       "text": "Photosynthesis and respiration are complementary processes to each other. They maintain the oxygen-carbon dioxide balance in nature together. However, they are different from one another. Some of the major differences between them are mentioned below:",
       "has_gaps": false
@@ -1378,7 +1312,7 @@
       "id": "ch01-p015-b07",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table",
       "text": "Table 1.1: Comparison between Photosynthesis and Respiration.",
       "has_gaps": false
@@ -1387,7 +1321,7 @@
       "id": "ch01-p015-b08",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table_row",
       "text": "| Photosynthesis | Respiration |",
       "has_gaps": false
@@ -1396,7 +1330,7 @@
       "id": "ch01-p015-b09",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table_row",
       "text": "| This process takes place in plants only. | This process takes place in all the [livin?] organisms. |",
       "has_gaps": true
@@ -1405,7 +1339,7 @@
       "id": "ch01-p015-b10",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table_row",
       "text": "| During Photosynthesis plant utilizes carbon dioxide and water and releases oxygen. So, carbon dioxide and water raw materials. | During Respiration plants utilizes the oxygen and releases carbon dioxide [an?] water. So, carbon dioxide and water are the waste products. |",
       "has_gaps": true
@@ -1414,7 +1348,7 @@
       "id": "ch01-p015-b11",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table_row",
       "text": "| The process occurs in the presence of sunlight in day time only. | The process occurs all the time in cells. |",
       "has_gaps": false
@@ -1423,7 +1357,7 @@
       "id": "ch01-p015-b12",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table_row",
       "text": "| The process requires energy to make carbohydrates (sugar). | The process which reveres energy by using the carbohydrates (sugar). |",
       "has_gaps": false
@@ -1432,7 +1366,7 @@
       "id": "ch01-p015-b13",
       "printed_page": 15,
       "pdf_page": 18,
-      "section": "1.7",
+      "part": "content",
       "kind": "table_row",
       "text": "| In plants, the dry weight increases due to synthesis of food (sugars). | In plants, the dry weight decreases [du?] to utilization of food (sugars). |",
       "has_gaps": true
@@ -1441,7 +1375,7 @@
       "id": "ch01-p016-b01",
       "printed_page": 16,
       "pdf_page": 19,
-      "section": "1.7",
+      "part": "content",
       "kind": "figure",
       "text": "Sunlight / Plants produce Carbohydrates (C6H12O6) and Oxygen (O2) / Plant cell / Chloroplast / Plants use [?arbon] dioxide (CO2) and water (H2O) / Animals use Carbohydrates (C6H12O6) and Oxygen (O2) / Animals produce Carbon dioxide (CO2) and water (H2O) / RESPIRATION — Fig. 1.14 Comparison between photosynthesis and respiration",
       "has_gaps": true
@@ -1450,7 +1384,7 @@
       "id": "ch01-p016-b02",
       "printed_page": 16,
       "pdf_page": 19,
-      "section": "1.8",
+      "part": "content",
       "kind": "heading",
       "text": "1.8 Minerals required by plants",
       "has_gaps": false
@@ -1459,7 +1393,7 @@
       "id": "ch01-p016-b03",
       "printed_page": 16,
       "pdf_page": 19,
-      "section": "1.8",
+      "part": "content",
       "kind": "paragraph",
       "text": "Plants need minerals along with carbon dioxide and water to [surviv?] They need mineral elements for normal and healthy growth. Plants [u?] minerals to make food molecules such as protein out of the glucose [durin?] photosynthesis.",
       "has_gaps": true
@@ -1468,7 +1402,7 @@
       "id": "ch01-p016-b04",
       "printed_page": 16,
       "pdf_page": 19,
-      "section": "1.8",
+      "part": "content",
       "kind": "heading",
       "text": "1.8.1 How minerals get into plants?",
       "has_gaps": false
@@ -1477,7 +1411,7 @@
       "id": "ch01-p016-b05",
       "printed_page": 16,
       "pdf_page": 19,
-      "section": "1.8",
+      "part": "content",
       "kind": "paragraph",
       "text": "Mineral elements from the soil enter the roots of plants in the form of solution. Some of the minerals dissolved in the water enter the root hair cells. However, most minerals are moved into the plant root cells using energy. This is because there are usually fewer minerals in the soil than in the plant cells. Energy [?] needed to pull minerals into the root cells.",
       "has_gaps": true
@@ -1486,7 +1420,7 @@
       "id": "ch01-p017-b01",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "1.8",
+      "part": "content",
       "kind": "heading",
       "text": "[?ole] of Magnesium in plant Growth",
       "has_gaps": true
@@ -1495,7 +1429,7 @@
       "id": "ch01-p017-b02",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "1.8",
+      "part": "content",
       "kind": "paragraph",
       "text": "Magnesium is required by the plant cells to capture energy needed [fo?] [?hotosynthesis]. Without magnesium chlorophyll cannot capture the [Su?] [?nergy]. Magnesium is essential to make chlorphyll which gives green [colou?] [?o] leaves.",
       "has_gaps": true
@@ -1504,7 +1438,7 @@
       "id": "ch01-p017-b03",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "1.8",
+      "part": "content",
       "kind": "heading",
       "text": "[?ole] of Nitrates in plant Growth",
       "has_gaps": true
@@ -1513,7 +1447,7 @@
       "id": "ch01-p017-b04",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "1.8",
+      "part": "content",
       "kind": "paragraph",
       "text": "Nitrates are nitrogen based compounds. Plants absorb nitrates from [th?] [?oil] and utilize them to make proteins. Farmers also use fertilizers [containin?] [?itrates] to increase the yield and growth of crops.",
       "has_gaps": true
@@ -1522,7 +1456,7 @@
       "id": "ch01-p017-b05",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "heading",
       "text": "Key Points",
       "has_gaps": false
@@ -1531,7 +1465,7 @@
       "id": "ch01-p017-b06",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "The root system includes those parts of the plant that present below the ground in soil.",
       "has_gaps": false
@@ -1540,7 +1474,7 @@
       "id": "ch01-p017-b07",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Shoot system includes those parts of the plants that are present above the ground.",
       "has_gaps": false
@@ -1549,7 +1483,7 @@
       "id": "ch01-p017-b08",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Xylem cells are known as water conducting cells. Phloem cells transport food produced by the leaves throughout the plant (translocation).",
       "has_gaps": false
@@ -1558,7 +1492,7 @@
       "id": "ch01-p017-b09",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize nutrients from carbon dioxide and water.",
       "has_gaps": false
@@ -1567,7 +1501,7 @@
       "id": "ch01-p017-b10",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Respiration is a process in living organisms involving the production of energy, typically with the intake of oxygen and release of carbon dioxide from the oxidation of complex organic substances.",
       "has_gaps": false
@@ -1576,7 +1510,7 @@
       "id": "ch01-p017-b11",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Different factors like temperature, humidity, wind speed and light intensity affect the rate of transpiration.",
       "has_gaps": false
@@ -1585,7 +1519,7 @@
       "id": "ch01-p017-b12",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Aerobic respiration requires oxygen while anaerobic respiration does not require oxygen.",
       "has_gaps": false
@@ -1594,7 +1528,7 @@
       "id": "ch01-p017-b13",
       "printed_page": 17,
       "pdf_page": 20,
-      "section": "key_points",
+      "part": "key_points",
       "kind": "list_item",
       "text": "Magnesium is used by chlorophyll to capture energy and nitrates are used by plants to produce protein.",
       "has_gaps": false
@@ -1603,7 +1537,7 @@
       "id": "ch01-p018-b01",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "heading",
       "text": "Exercise",
       "has_gaps": false
@@ -1612,7 +1546,7 @@
       "id": "ch01-p018-b02",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "heading",
       "text": "A Choose the correct option against each statement.",
       "has_gaps": false
@@ -1621,7 +1555,7 @@
       "id": "ch01-p018-b03",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "1. Which of the following processes is responsible to provide raw material for Respiration? a. Photosynthesis b. Diffusion c. Translocation d. a and b",
       "has_gaps": false
@@ -1630,7 +1564,7 @@
       "id": "ch01-p018-b04",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "2. The area of young roots where most of the absorption takes place is: a. root epidermis b. root hair c. root cortex d. root vascular bundles",
       "has_gaps": false
@@ -1639,7 +1573,7 @@
       "id": "ch01-p018-b05",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "3. Which feature is specialized in the prevention of water loss in leaves? a. Waxy cuticle b. Root hair c. Epidermis d. Stomata",
       "has_gaps": false
@@ -1648,7 +1582,7 @@
       "id": "ch01-p018-b06",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "4. The process of photosynthesis takes place in: a. ground tissues b. dermal tissues c. vascular tissues d. mesophyll [tissue?]",
       "has_gaps": true
@@ -1657,7 +1591,7 @@
       "id": "ch01-p018-b07",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "5. Which structure of the plant transports sugar? a. Mesophyll cells b. Lower xylem c. Phloem d. Xylem",
       "has_gaps": false
@@ -1666,7 +1600,7 @@
       "id": "ch01-p018-b08",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "6. Which cells keep the stem from breaking when bent? Choose the cell and reason a. Parenchyma-photosynthetic b. Sclerenchyma-hard and stiff c. Collenchyma-flexible d. Xylem-long cells",
       "has_gaps": false
@@ -1675,7 +1609,7 @@
       "id": "ch01-p018-b09",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "7. In which organelle of the plant cell, process of respiration takes places? a. Nucleus b. Mitochondrion c. Chloroplast d. Vacoule",
       "has_gaps": false
@@ -1684,7 +1618,7 @@
       "id": "ch01-p018-b10",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "8. The importance of respiration in plants is that: a. it provides oxygen to plants. b. it provides energy. c. it releases carbon dioxide. d. all of the above",
       "has_gaps": false
@@ -1693,7 +1627,7 @@
       "id": "ch01-p018-b11",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "9. Choose the correct function of a leaf: a. to conduct photosynthesis b. to restore sunlight c. to release the CO2 d. the use of energy",
       "has_gaps": false
@@ -1702,7 +1636,7 @@
       "id": "ch01-p018-b12",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "10. Which gas would increase in the atmosphere if there would be no [photosynthesi?] a. Nitrogen b. Carbon dioxide c. Oxygen d. Hydrogen",
       "has_gaps": true
@@ -1711,7 +1645,7 @@
       "id": "ch01-p018-b13",
       "printed_page": 18,
       "pdf_page": 21,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "11. Which is the main product of photosynthesis? a. Glucose b. Oxygen c. Energy d. Pyruvic acid",
       "has_gaps": false
@@ -1720,7 +1654,7 @@
       "id": "ch01-p019-b01",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "[?2.] Which of the following mineral is required by the plant cell to capture energy? a. Calcium b. Potassium c. Magnesium d. Nitrates",
       "has_gaps": true
@@ -1729,7 +1663,7 @@
       "id": "ch01-p019-b02",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "heading",
       "text": "B Answer the following questions briefly.",
       "has_gaps": false
@@ -1738,7 +1672,7 @@
       "id": "ch01-p019-b03",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "1. How does sunlight help plants in making glucose? Answer with an equation.",
       "has_gaps": false
@@ -1747,7 +1681,7 @@
       "id": "ch01-p019-b04",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "2. How will the following conditions affect the rate of transpiration? a. Rainy season b. A hot afternoon c. Cold winds",
       "has_gaps": false
@@ -1756,7 +1690,7 @@
       "id": "ch01-p019-b05",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "3. Why are the phloem vessels perforated?",
       "has_gaps": false
@@ -1765,7 +1699,7 @@
       "id": "ch01-p019-b06",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "4. a. Name the factors that help in the movement of water in long xylem tubes. b. Define transpiration.",
       "has_gaps": false
@@ -1774,7 +1708,7 @@
       "id": "ch01-p019-b07",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "5. a. Highlight the dermal tissues in the given picture of the plant structure. b. Mention their functions. c. How will it affect the plants' functions if the dermal tissues be removed from the leaf cells?",
       "has_gaps": false
@@ -1783,7 +1717,7 @@
       "id": "ch01-p019-b08",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "6. a. What is anaerobic respiration? b. Where does it take place in the cell? c. Give a word equation of anaerobic respiration.",
       "has_gaps": false
@@ -1792,7 +1726,7 @@
       "id": "ch01-p019-b09",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "7. a. Define translocation. b. Enlist the cells involved in the process of food translocation.",
       "has_gaps": false
@@ -1801,7 +1735,7 @@
       "id": "ch01-p019-b10",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "8. Define tertiary roots.",
       "has_gaps": false
@@ -1810,7 +1744,7 @@
       "id": "ch01-p019-b11",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "9. What is the role of stomata in leaves?",
       "has_gaps": false
@@ -1819,7 +1753,7 @@
       "id": "ch01-p019-b12",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "[?0.] How is food transported in plant?",
       "has_gaps": true
@@ -1828,7 +1762,7 @@
       "id": "ch01-p019-b13",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "11. What is the role of nitrates in plants?",
       "has_gaps": false
@@ -1837,7 +1771,7 @@
       "id": "ch01-p019-b14",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "[?2.] Why is the photosynthesis important for plants and humans?",
       "has_gaps": true
@@ -1846,7 +1780,7 @@
       "id": "ch01-p019-b15",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "heading",
       "text": "C Answer the following questions in detail.",
       "has_gaps": false
@@ -1855,7 +1789,7 @@
       "id": "ch01-p019-b16",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "1. How does the structure of leaves facilitate the process of photosynthesis?",
       "has_gaps": false
@@ -1864,7 +1798,7 @@
       "id": "ch01-p019-b17",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "2. Explain the process of respiration and draw a word equation for the process.",
       "has_gaps": false
@@ -1873,7 +1807,7 @@
       "id": "ch01-p019-b18",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "3. Make a comparison between photosynthesis and respiration.",
       "has_gaps": false
@@ -1882,7 +1816,7 @@
       "id": "ch01-p019-b19",
       "printed_page": 19,
       "pdf_page": 22,
-      "section": "exercise",
+      "part": "exercise",
       "kind": "list_item",
       "text": "4. How does the structure of the roots, stem and leaves of the plant permit the movement of food, water and gases? Discuss each part separately.",
       "has_gaps": false

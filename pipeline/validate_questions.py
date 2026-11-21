@@ -3,15 +3,17 @@
 Usage: .venv/Scripts/python.exe pipeline/validate_questions.py 1
 Exit code 0 = all questions pass; 1 = at least one problem (each is printed).
 
-Rules checked (see CLAUDE.md "Question rules"):
-  - schema (types, 4 different MCQ options, answer is one of the options)
-  - SLO id exists in slos.json; topic exists in text.json
-  - page is inside the chapter; source_excerpt is found word for word on that page,
-    inside the question's topic, and contains no cut-off/UNREADABLE marks
+Rules checked (see CLAUDE.md "Question rules"; no topics, ADR 0002):
+  - schema: type mcq / true_false / short, fixed marks, MCQ options, True/False answer
+  - the SLO exists in slos.json, and the question's page is one of that SLO's pages
+  - page is inside the chapter; source_excerpt is found word for word on that page
+    in a quotable block (content / key_points, never exercise or the SLO list) and
+    contains no cut-off/UNREADABLE marks
   - every word of question, options and answer is in the chapter text or in
     data/common_words.txt (simple plural/verb endings allowed)
   - short sentences (max MAX_SENTENCE_WORDS words)
-  - no duplicate ids or duplicate question text
+  - bank level: no duplicate ids, no duplicate question text, and one book fact gives
+    at most one question per type (source_excerpt + type unique), so no padding
 """
 
 from __future__ import annotations
@@ -24,7 +26,7 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
-from schemas import Question
+from schemas import QUOTABLE_PARTS, Question
 
 ROOT = Path(__file__).resolve().parent.parent
 GAP = re.compile(r"\[[^\]]*\?[^\]]*\]|UNREADABLE")
@@ -52,20 +54,25 @@ def normalize(text: str) -> str:
 
 
 @dataclass
+class Block:
+    page: int
+    part: str
+    text: str
+
+
+@dataclass
 class Context:
     chapter: int
-    slo_ids: set[str]
-    topic_ids: set[str]
+    slo_pages: dict[str, set[int]]  # SLO id -> printed pages that teach it
     page_range: tuple[int, int]
-    # (printed_page, section, text) for every block of the chapter
-    blocks: list[tuple[int, str, str]]
-    vocabulary: set[str] = field(default_factory=set)
+    blocks: list[Block]
     common: set[str] = field(default_factory=set)
+    vocabulary: set[str] = field(default_factory=set)
 
     def __post_init__(self) -> None:
         if not self.vocabulary:
-            for _, _, text in self.blocks:
-                clean = MARKERS.sub(" ", GAP.sub(" ", text))
+            for block in self.blocks:
+                clean = MARKERS.sub(" ", GAP.sub(" ", block.text))
                 self.vocabulary.update(words(clean))
         self._stems = {stem(w) for w in self.vocabulary | self.common}
 
@@ -82,24 +89,22 @@ def load_common_words(path: Path) -> set[str]:
     return result
 
 
+def read_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
 def load_context(chapter: int) -> Context:
     folder = ROOT / "data" / f"ch{chapter:02d}"
-    slos = json.loads((folder / "slos.json").read_text(encoding="utf-8-sig"))
-    text = json.loads((folder / "text.json").read_text(encoding="utf-8-sig"))
-    book = json.loads((ROOT / "data" / "book.json").read_text(encoding="utf-8-sig"))
-    first, last = book["chapters"][chapter - 1]["printed_pages"]
-    blocks = [(b["printed_page"], b["section"], b["text"]) for b in text["blocks"]]
-    # SLO text is also chapter text (it is printed on page 1)
-    vocab_blocks = blocks + [(first, "intro", s["text"]) for s in slos["slos"]]
-    ctx = Context(
+    slos = read_json(folder / "slos.json")
+    text = read_json(folder / "text.json")
+    first, last = read_json(ROOT / "data" / "book.json")["chapters"][chapter - 1]["printed_pages"]
+    return Context(
         chapter=chapter,
-        slo_ids={s["id"] for s in slos["slos"]},
-        topic_ids={t["id"] for t in text["topics"]},
+        slo_pages={s["id"]: set(s["pages"]) for s in slos["slos"]},
         page_range=(first, last),
-        blocks=vocab_blocks,
+        blocks=[Block(b["printed_page"], b["part"], b["text"]) for b in text["blocks"]],
         common=load_common_words(ROOT / "data" / "common_words.txt"),
     )
-    return ctx
 
 
 def check_question(raw: dict, ctx: Context) -> list[str]:
@@ -112,25 +117,26 @@ def check_question(raw: dict, ctx: Context) -> list[str]:
     problems: list[str] = []
     if q.chapter != ctx.chapter:
         problems.append(f"chapter is {q.chapter}, expected {ctx.chapter}")
-    if q.slo_id not in ctx.slo_ids:
-        problems.append(f"SLO {q.slo_id} does not exist in this chapter")
-    if q.topic not in ctx.topic_ids:
-        problems.append(f"topic {q.topic} does not exist in this chapter")
 
     first, last = ctx.page_range
     if not first <= q.page <= last:
         problems.append(f"page {q.page} is outside the chapter (pages {first}-{last})")
 
+    slo_pages = ctx.slo_pages.get(q.slo_id)
+    if slo_pages is None:
+        problems.append(f"SLO {q.slo_id} does not exist in this chapter")
+    elif q.page not in slo_pages:
+        problems.append(f"page {q.page} is not one of {q.slo_id}'s pages {sorted(slo_pages)}")
+
     excerpt = normalize(q.source_excerpt)
     if GAP.search(excerpt) or "[" in excerpt:
         problems.append("source_excerpt contains cut-off or UNREADABLE text")
     else:
-        on_page = [(section, normalize(t)) for page, section, t in ctx.blocks if page == q.page]
-        hits = [section for section, t in on_page if excerpt in t]
+        hits = [b.part for b in ctx.blocks if b.page == q.page and excerpt in normalize(b.text)]
         if not hits:
             problems.append(f"source_excerpt not found word for word on page {q.page}")
-        elif q.topic not in hits:
-            problems.append(f"source_excerpt is on page {q.page} but not inside topic {q.topic}")
+        elif not QUOTABLE_PARTS.intersection(hits):
+            problems.append(f"source_excerpt comes from {hits[0]} text, which may not be quoted")
 
     texts = [q.question, q.answer, *q.options]
     unknown = sorted({w for t in texts for w in words(t) if not ctx.knows(w)})
@@ -148,6 +154,7 @@ def check_bank(questions: list[dict], ctx: Context) -> dict[str, list[str]]:
     report: dict[str, list[str]] = {}
     seen_ids: set[str] = set()
     seen_text: set[str] = set()
+    seen_fact: set[tuple[str, str]] = set()
     for i, raw in enumerate(questions):
         qid = str(raw.get("id", f"#{i + 1}"))
         problems = check_question(raw, ctx)
@@ -156,8 +163,12 @@ def check_bank(questions: list[dict], ctx: Context) -> dict[str, list[str]]:
         text = normalize(str(raw.get("question", ""))).lower()
         if text in seen_text:
             problems.append("duplicate question text")
+        fact = (normalize(str(raw.get("source_excerpt", ""))).lower(), str(raw.get("type", "")))
+        if fact in seen_fact:
+            problems.append("another question of the same type already uses this source_excerpt")
         seen_ids.add(qid)
         seen_text.add(text)
+        seen_fact.add(fact)
         if problems:
             report[qid] = problems
     return report
@@ -166,7 +177,7 @@ def check_bank(questions: list[dict], ctx: Context) -> dict[str, list[str]]:
 def main() -> int:
     chapter = int(sys.argv[1])
     path = ROOT / "data" / f"ch{chapter:02d}" / "questions.json"
-    bank = json.loads(path.read_text(encoding="utf-8-sig"))
+    bank = read_json(path)
     report = check_bank(bank["questions"], load_context(chapter))
     total = len(bank["questions"])
     for qid, problems in report.items():

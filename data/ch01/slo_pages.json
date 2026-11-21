@@ -1,0 +1,21 @@
+{
+  "chapter": 1,
+  "status": "proposed",
+  "notes": [
+    "Printed book pages that teach each SLO. Proposed by Claude from the transcripts.",
+    "Izan confirms against the book; then set status to \"confirmed\".",
+    "A question's source page must be in its SLO's list. Pages may appear under more than one SLO.",
+    "Page 17 holds the Key Points; exercise pages 18-19 are never a question source."
+  ],
+  "pages": {
+    "ch01-slo01": {"pages": [2, 3, 4, 5, 6, 7, 8, 9], "why": "tissues; roots (external + internal); stem (external + internal); leaf (external + internal); root and shoot systems"},
+    "ch01-slo02": {"pages": [3, 4, 7, 9, 10, 12, 17], "why": "xylem and phloem tissues; xylem/phloem model; vascular tissue in stem; transport system; water up the xylem; translocation through phloem; key point on xylem/phloem"},
+    "ch01-slo03": {"pages": [13, 17], "why": "1.5 photosynthesis: definition and word equation; key point"},
+    "ch01-slo04": {"pages": [16, 17], "why": "1.8 minerals; how minerals enter; role of magnesium and nitrates; key point"},
+    "ch01-slo05": {"pages": [7, 8, 13, 14], "why": "internal structure of a leaf; adaptations of leaves for photosynthesis i-viii"},
+    "ch01-slo06": {"pages": [14, 15, 17], "why": "1.6 cellular respiration, glycolysis, anaerobic and aerobic respiration, word equations; key points"},
+    "ch01-slo07": {"pages": [15, 16], "why": "1.7 comparison and Table 1.1; Fig. 1.14"},
+    "ch01-slo08": {"pages": [9, 10, 11, 12, 17], "why": "1.4.1 transpiration; transpiration stream; factors affecting transpiration; importance; key point on factors"},
+    "ch01-slo09": {"pages": [10, 11], "why": "transpiration stream: cohesion, adhesion, suction pressure move water up to the top of the plant; pressure labels in Fig. 1.12"}
+  }
+}
