@@ -6,53 +6,67 @@ in plain language, and wait for Izan before moving on. Do everything you can
 yourself; only ask Izan for what you cannot do (e.g. checking against the real book).
 
 ## Project
-Web app for government-school teachers to make print-ready tests from the
-official textbook. Current goal: demo prototype for ONE book, Class 7 Science
-(English). Later (NOT now): Classes 7-9, more subjects, Urdu RTL, DOCX, AI chat,
-licensing. Plan and status: docs/PLAN.md.
+Web app for government-school teachers to make print-ready papers from the
+official textbook (Class 7 General Science, AJ&K / National Curriculum 2022-23).
+Current goal: a working prototype for ONE chapter (Chapter 1) to show stakeholders.
+Other chapters are added one at a time, only after approval. Later (NOT now):
+Classes 8-9, more subjects, Urdu RTL, Term Exam mode, offline install, AI chat.
+Plan and status: docs/PLAN.md. Big decisions: docs/adr/ (latest: ADR 0004).
 
 ## Truth rules (most important)
 1. The book is the only source. Never use outside knowledge, facts or terms.
-2. Never invent SLOs, SLO page links, terms, page numbers or quotes.
-3. SLOs come ONLY from data/chXX/slos.json, typed by Izan from the physical book.
+2. Never invent SLOs, SLO codes, cognitive levels, terms, page numbers or quotes.
+3. SLOs (code, statement, cognitive level) come ONLY from data/chXX/slos.json,
+   typed by Izan from the book's SLO table.
 4. If text is cut off, blurry or unclear, write UNREADABLE. Never guess.
 5. Page numbers = printed book page numbers; also store the PDF page index.
 6. If unsure, stop and ask Izan.
 
-## Question rules
-1. Each question maps to exactly one SLO of its chapter.
-2. Everything comes from the chapter text. No outside terms, jargon or facts.
-3. Short, simple sentences for students with limited English.
-4. Each question stores chapter, SLO id, page, exact source excerpt.
-   There are NO topics or sub-topics anywhere (ADR 0002): teachers work only with SLOs.
-   The source page must be one of the SLO's pages (data/chXX/slo_pages.json).
-5. MCQ wrong options also use only chapter words.
-6. Every question must pass pipeline/validate_questions.py before it goes in the bank.
-7. Questions are made OFFLINE. The app never calls an AI at runtime; it only picks randomly.
-8. Types: mcq (1 mark), true_false (1 mark), short (2 marks). One book fact gives at
-   most one question per type. Never pad the bank with reworded copies.
-9. The requested count is a target: the app gives at most what the bank holds for the
-   chosen SLOs and says why if fewer.
+## Question-bank rules (per chapter)
+1. The bank starts from the chapter's own exercise (MCQ, short, long), copied exactly.
+2. Map every exercise question to the SLO(s) it covers (slo_ids[]). Write a coverage
+   report: question → SLO table, plus uncovered SLOs.
+3. If the exercise covers ALL SLOs: keep all exercise questions and add only a modest
+   number of extra MCQs. Add NO new short or long questions.
+4. If an SLO is uncovered: keep all exercise questions and write new questions only
+   for the uncovered SLOs.
+5. Self-written questions use only the chapter's content and words, in short, simple
+   sentences, and carry a bracketed note, e.g. "(Newly generated - SLO S-07-A-05, not
+   covered in exercise)". Exercise questions carry no note.
+6. Every answer comes from the chapter text and stores its page and exact quote.
+7. Every question stores: id, chapter, type (mcq | short | long), text, options (MCQ),
+   answer, slo_ids[], cognitive_level, source ("exercise" | "generated"), generated_note.
+   No topics or sub-topics (ADR 0002). No true/false.
+8. Every question must pass pipeline/validate_questions.py before it goes in the bank.
+9. The pipeline must work for any chapter without code changes (data only).
+10. Questions are made OFFLINE. The app never calls an AI at runtime.
+
+## App rules
+- All selection and validation logic lives in the backend (web/lib/server and API
+  routes). The frontend only shows what the backend returns; it never repeats the logic.
+- Every selected SLO gets at least one question. Random selection, no duplicates.
+- Difficulty presets are targets: fill from the nearest level and say so.
+- Counts above what the bank holds: "Can't generate more questions from the selected SLOs."
 
 ## How to work
 - One task from docs/PLAN.md at a time. Check its "done when" test before calling it done.
 - After each task: update docs/PLAN.md status, then commit and push.
 - Vertical slice: finish Chapter 1 fully before other chapters.
-- If behind: cut MCQ/mixed before cutting quality.
+- If behind: cut polish before cutting quality.
 - Write a short ADR in docs/adr/ for big decisions.
 
 ## Code standards
 Python 3.12 (pipeline, PyMuPDF, Pydantic, pytest). Next.js + strict TypeScript +
-Tailwind + shadcn/ui + Zod (app, Vitest). PDF = print CSS + browser "Save as PDF" (no Playwright).
-npm, not pnpm. No unnecessary dependencies. The app is an installable offline
-web app (PWA: manifest + hand-written service worker) for laptop and mobile.
-Small modules, validate data at boundaries, lint, tests for validator and
-sampling, conventional commits (feat:, fix:, docs:, chore:).
+Tailwind + shadcn/ui + Zod (app and backend in one project, Vitest). Runs locally with
+one command (`npm run dev` in web/). PDF = print CSS + browser "Save as PDF" (no Playwright).
+npm, not pnpm. No unnecessary dependencies. Small modules, validate data at boundaries,
+lint, tests for validator, selection, swap and regenerate, conventional commits
+(feat:, fix:, docs:, chore:).
 
 ## UI standards
 Established component library (shadcn/ui), neutral palette, one accent colour,
 real loading/empty/error states. No gradients, emoji icons, lorem ipsum or dead
-buttons. Every visible control must work.
+buttons. Every visible control must work; "coming soon" items are visibly disabled.
 
 ## Git & backup rules
 - Never work directly on `main` for new features. Create a new branch for each feature or fix.

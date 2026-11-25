@@ -1,140 +1,134 @@
-# 3-day prototype plan – Class 7 Science test generator
+# Plan – Class 7 General Science assessment-paper generator
 
-Goal: demo where a teacher picks class, subject, chapter, one or more **SLOs**,
-the number of questions and the question type, clicks Generate, and gets a
-print-ready paper of random questions from a reviewed question bank (Chapter 1 first).
+Goal: a working **Chapter 1 prototype** to show stakeholders. A teacher picks the book,
+the chapter, the SLOs, an optional difficulty preset and how many MCQ / Short / Long
+questions they want. The app builds a paper from a question bank that is based on
+**the book's own exercise**, lets the teacher swap and lock questions, and prints the
+paper and a separate answer key. More chapters come only after stakeholders approve.
 
 Legend: **M** = must, **S** = should, **C** = cut unless ahead.
-Owner is Claude unless marked "Izan". Status: todo / doing / done.
+Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 
-> 2026-11-21 customer change: **no topics or sub-topics**. Teachers work only with
-> SLOs. See `docs/adr/0002-slo-only-no-topics.md`.
+> 2026-11-25 customer change (ADR 0004): the bank is the chapter exercise mapped to
+> SLOs, plus a few extra questions written by Claude only where needed. No large
+> generated bank, no True/False. Selection logic lives in the backend.
+> Earlier changes: ADR 0002 (SLOs only, no topics), ADR 0003 (print and PWA; the PWA part is
+> on hold, see open question 6).
 
-## Day 1 – book to clean data
+## Already done (still valid)
+| # | Work | Reused how |
+|---|---|---|
+| 0-3 | Tools installed; book PDF rendered to upright page images; `data/book.json` (12 chapters, page ranges) | Unchanged. Pipeline works for any chapter. |
+| 4 | Izan typed the Chapter 1 SLOs → `data/ch01/slos.json` (9 SLOs, statements only) | Kept. Needs SLO codes and cognitive levels added (task 1.1). |
+| 5 | Chapter 1 transcribed → `data/ch01/pages/b001-b019.txt`, `text.json` (202 blocks, incl. the exercise on book pages 18-19) | The exercise questions are already transcribed. The chapter text is the source for answers and extra MCQs. |
+| 7-8 | Question schema, validator (outside words, fake SLO, quote must match the page), 25 pytest tests; SLO→page map confirmed by Izan | Schema changes (task 1.2); the checks stay. |
+| 9-10a | 174 Claude-written questions (57 MCQ, 63 T/F, 54 Short), self-reviewed | **Not the bank any more.** The best MCQs can become the "extra MCQs" (task 1.6). T/F and Short are kept in git history only. |
+| 10b, 10c, 11-14a (old) | Spot-check, review page, old app plan | **Dropped / replaced** by the phases below. |
+
+## Phase 1 – Chapter 1 data (bank JSON + coverage report)
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 0 | Install Node 22 + Python 3.12 | `node -v` shows v22, `python --version` shows 3.12 | M | done |
-| 1 | Folder skeleton, .gitignore, PDF copied into `book/` (Izan copies) | `git status` does not show the PDF; skeleton pushed | M | done |
-| 2 | Render all pages to images with PyMuPDF; record rotation per page and fix it | 196 images in `data/pages/`; every page checked upright | M | done |
-| 3 | Map the book: chapter titles + page ranges, glossary range → `data/book.json` | 12 chapters + glossary listed; Izan confirms against the contents page | M | done |
-| 4 | Izan types Chapter 1 SLOs → `data/ch01/slos.json` | File passes schema check; Izan says it matches the book | M (Izan) | done (9 SLOs) |
-| 5 | Read Chapter 1 pages (Claude vision) → `data/ch01/text.json`, UNREADABLE marks | Passes schema; Izan spot-checks 2 pages against the book | M | done (Izan checked pages 5 and 13) |
-| 6 | ADR 0001: offline question bank, no runtime AI | File exists, under 1 page | S | done |
+| 1.1 | Izan adds each SLO's **code** and **cognitive level** exactly as printed in the book's SLO table → `slos.txt` / `slos.json` | Schema check passes; Izan says it matches the book | M (Izan) | todo |
+| 1.2 | Schema v2 + validator + tests: `slo_ids[]`, type `mcq|short|long`, `cognitive_level`, `source` exercise/generated, `generated_note`, answer quote | pytest passes incl. new cases (note on exercise question → error; generated without note → error; unknown SLO or level → error) | M | todo |
+| 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; unclear spots = UNREADABLE until Izan checks them | Validator passes; Izan has fixed the unclear spots from the book | M | todo |
+| 1.4 | Map every exercise question to its SLO(s) → `data/ch01/coverage.md` (question → SLO table + uncovered SLOs) | Every exercise question mapped; Izan approves the mapping | M | todo |
+| 1.5 | Answers for exercise questions, each from the chapter text with its page and quote (MCQ: correct option; Short/Long: model answer) | Validator passes; every answer has a page and a quote | M | todo |
+| 1.6 | Extra questions by the rules: all SLOs covered → a few extra MCQs only (reuse the best of the 57); SLO uncovered → new questions for that SLO only. Each with its bracketed note | Validator passes; coverage report updated | M | todo |
+| 1.7 | `pipeline/build_bank.py N` → `data/chNN/bank.json` + coverage report; works for any chapter with no code changes | Running it for chapter 1 gives the bank; a dry run on chapter 2's folder fails only for missing data, not missing code | M | todo |
+| 1.8 | Izan spot-checks the bank (all generated questions + 5 exercise answers) | Problems fixed | M (Izan) | todo |
 
-Notes from task 2:
-- Every PDF page is one book page scanned sideways: odd PDF pages turn 270°,
-  even pages 90° (`data/page_rotations.json`). Re-create images with
-  `.venv/Scripts/python.exe pipeline/render_pages.py --sheets`.
-- Printed page number = PDF page − 3 (PDF page 4 = book page 1).
-
-Notes from task 5:
-- Transcripts per page in `data/ch01/pages/bNNN.txt` (marks explained in its README);
-  `pipeline/build_text.py 1` builds `data/ch01/text.json` (202 blocks).
-- The scan cuts words at the page edges: 104 of 202 blocks contain `[?...]` marks.
-  Questions must quote only clean stretches of text (validator rule).
-
-## Day 2 – SLO-only data, question bank
+## Phase 2 – Backend (server-side TypeScript in the Next.js app)
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 7 | Question schema + validator + tests | pytest passes, incl. outside word, fake SLO, fake excerpt | M | done |
-| 8 | SLO-only migration: ADR 0002, remove topics (schema, build_text, validator, tests, topics.json), text `part` labels, SLO page map, capacity report | pytest passes; text.json has no topics; Izan confirmed SLO pages | M | done (25 tests; pages confirmed 2026-11-21) |
-| 9 | Write Ch1 bank one SLO at a time (Short, MCQ, True/False) | All pass validator; capacity report per SLO × type | M | done (174: 57 MCQ, 63 T/F, 54 Short; 17-22 per SLO; all `pending` until 10a) |
-| 10a | Claude self-review: every question vs its quote (answer really in quote? tests its SLO? simple wording?); clear → `approved` "self-checked", doubtful → `pending` + reason | Every question approved or flagged | M | done (172 approved incl. 7 small fixes; 2 flagged) |
-| 10b | Izan spot-check: all flagged + 2 random approved per SLO (~15 min) | Problems fixed or rejected | M (Izan) | doing (list in `data/ch01/spot_check.md`: 2 flagged + 18 sample) |
-| 10c | Simple review page: one question at a time with answer + quote, Approve / Reject | Izan can review with clicks only | S | todo |
+| 2.1 | Next.js skeleton in `web/`; bank loader validates `bank.json` with Zod at start | Bad bank file → clear error; lint + typecheck pass | M | todo |
+| 2.2 | `GET /api/books`, `/api/chapters` (only Ch1 active, term-exam flag), `/api/chapters/1/slos` | Vitest route tests pass | M | todo |
+| 2.3 | `POST /api/availability`: for chosen SLOs → available count per type and per type × level | Vitest: counts match bank; questions shared by two SLOs counted once | M | todo |
+| 2.4 | `POST /api/generate`: every selected SLO first, then difficulty target with nearest-level fallback + notes, random, no duplicates, seeded | Vitest: coverage, fallback, caps, no duplicates, same seed = same paper | M | todo |
+| 2.5 | `POST /api/swap` and regenerate with locked questions (stateless: browser sends the current paper and locks) | Vitest: swap keeps type + SLO + level, none left → disabled; locked stay on regenerate | M | todo |
+| 2.6 | Validation errors from the server: count above max, count below number of SLOs (warning), Custom % not 100 | Vitest: each message returned | M | todo |
+| 2.7 | Print views: paper and answer key as separate A4 pages (print CSS → browser "Save as PDF") | Chrome print preview correct for both | M | todo |
 
-## Day 3 – app, paper, rehearsal
+## Phase 3 – UI (shadcn/ui), wired to the backend
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 11 | Next.js app: Class → Subject → Chapter → SLO checklist (with counts) → count 10/15/25 or Custom (1-30) → type (Short/MCQ/True-False/Mix) → Generate; layout works on phone and laptop | Every UI state below works; lint + typecheck pass | M | todo |
-| 12 | Selection logic as a pure TS module (fair share across SLOs, Mix split, shortfall report) | Vitest: caps, round-robin spread, Mix redistribution, no fact reused, seeded randomness | M | todo |
-| 13 | Print page (A4 print CSS) + optional answer key; browser Save as PDF | Print preview correct in Chrome | M | todo |
-| 14 | Loading / empty / error states, every control works | Manual check list passes | M | todo |
-| 14a | Installable offline web app (PWA): web manifest + hand-written service worker that caches the app and question data (no extra library) | Installs from the browser on laptop (Chrome) and Android phone; generates and prints a paper with internet switched off | M | todo |
-| 15 | Chapters 2-3: SLOs (Izan types), transcripts, SLO pages, bank | Bank for those chapters reviewed | C | todo |
-| 16 | Demo script + rehearsal | Full demo run twice without problems | M | todo |
+| 3.1 | Book → chapter(s); only Ch1 active; selecting all chapters of a term shows "Term Exam – coming soon" (disabled) | Clicks work; disabled items explain why | M | todo |
+| 3.2 | SLO list with Select all, code and cognitive-level tag | Works on phone and laptop | M | todo |
+| 3.3 | Difficulty preset (Balanced / Easy / Challenging / Custom); Custom shows % per level with availability and a running total | Generate blocked until total = 100% | M | todo |
+| 3.4 | MCQ / Short / Long count rows with live max; over max → "Can't generate more questions from the selected SLOs." | Messages come from the backend | M | todo |
+| 3.5 | Review screen: Swap (disabled if none), Lock, Regenerate | Every button works | M | todo |
+| 3.6 | Print paper / Print answer key buttons; loading, empty and error states | Manual check list passes | M | todo |
 
-## Design (SLO-only)
+## Phase 4 – Demo polish and QA
+| # | Task | Done when | Pri | Status |
+|---|---|---|---|---|
+| 4.1 | QA check list over the whole flow, on laptop and phone | All items pass | M | todo |
+| 4.2 | Demo script + two rehearsals | Two clean runs | M | todo |
 
-### Data and links
-- `data/chNN/slos.json`: SLOs typed by Izan (`chNN-sloNN`) + `pages` merged from
-  `data/chNN/slo_pages.json` (Claude proposes, Izan confirms).
-- Question → `slo_id`. Its `page` must be in that SLO's `pages`, and its
-  `source_excerpt` must appear word for word on that page in a `content` or
-  `key_points` block (never `exercise` or `slo_list`).
-- Types and marks: `mcq` 1, `true_false` 1, `short` 2.
-- One book fact gives at most one question per type (validator: `(source_excerpt, type)` unique).
+## Phase 5 – After stakeholder approval
+Add chapters one at a time: Izan types SLOs (with codes and levels) → transcribe →
+exercise → mapping → bank, using the Phase 1 pipeline unchanged. Later still: Classes
+8-9, more subjects, Urdu RTL, Term Exam mode, offline install (if approved).
 
-### How a paper is picked (app, no AI)
-- `cap(slo, type)` = approved questions for that SLO and type.
-- One type: shuffle each selected SLO's pool, take round-robin one per SLO,
-  skip empty SLOs, stop at N. Result = min(N, Σ cap).
-- Mix: targets ⌊N/3⌋ each, remainder to MCQ, then Short
-  (10 → 4/3/3, 15 → 5/5/5, 25 → 9/8/8). Slots a type cannot fill move round-robin to
-  the types with spare questions. Report per type: produced vs target, and why.
-- No book fact appears twice in one paper (even across types).
-- Only `approved` questions are used.
+## Design
 
-### UI states
-| Situation | Teacher sees |
-|---|---|
-| No SLO selected | Generate disabled; "Select at least one SLO" |
-| Custom count empty, < 1 or > 30 | Generate disabled; "Enter a number from 1 to 30" |
-| Offline, app not installed yet | Browser's own offline page (first visit needs internet) |
-| Requested > possible | Before: "Up to 12 questions possible". After: "12 of 15 generated – the selected SLOs have only 12 Short questions." |
-| Type has 0 possible | Type option disabled, "0 available" |
-| Mix not fully met | Paper with what exists + per-type report |
-| SLO with no questions | Row disabled, "No questions yet" |
-| Data failed to load | Error panel with retry |
+### Question record (`bank.json`)
+`id, chapter, type (mcq|short|long), text, options[] (MCQ), answer, marks,
+slo_ids[], cognitive_level, source (exercise|generated), generated_note,
+question_page, answer_page, answer_excerpt`.
+- `generated_note` example: "(Newly generated - SLO <code>, not covered in exercise)".
+  For extra MCQs when every SLO is covered: "(Newly generated - SLO <code>, extra MCQ)".
+  Exercise questions: empty.
+- `cognitive_level` comes from the SLO table, never invented (rule in open question 2).
+- Marks (proposed): MCQ 1, Short 2, Long 5.
 
-### Paper layout (A4)
-- **Header:**
-  - school name (remembered on the device);
-  - class, subject, chapter;
-  - date (editable);
-  - total marks, time allowed (optional);
-  - Name / Roll No lines.
-- **Sections** (only the ones used):
-  - A MCQs "Encircle the correct option";
-  - B True/False "Write T or F";
-  - C Short Questions "Answer briefly".
+### How a paper is built (backend, no AI)
+1. Pool = questions linked to at least one selected SLO.
+2. Coverage first: for each selected SLO with no question yet, pick one random
+   question of a requested type. If total count < number of SLOs → warning.
+3. Fill the rest of each type's count at random, aiming at the difficulty target.
+   If a level runs short, take from the nearest level (lower ↔ middle ↔ higher) and add a note.
+4. No duplicate questions. Locked questions are kept on regenerate.
+5. Swap: another unused question with the same type, SLO and level; disabled if none.
 
-  Each heading shows its marks, e.g. "(9 × 1 = 9)". Marks also appear beside each question.
-- **Optional answer key** on a new page (answers + book page, for the teacher only).
-  A **"Show SLO numbers"** checkbox adds the SLO number to each answer in the key.
-  No SLO ids or quotes on the student paper.
+### Difficulty presets (proposed, % of questions per cognitive level)
+| Preset | Lower | Middle | Higher |
+|---|---|---|---|
+| Easy | 60 | 30 | 10 |
+| Balanced | 40 | 40 | 20 |
+| Challenging | 20 | 40 | 40 |
+Level names follow the book's SLO table once Izan has typed it.
 
-### Decisions (Izan, 2026-11-21)
-1. Fill-in-the-blank: dropped.
-2. Mix split: even.
-3. Answer key: has a "Show SLO numbers" checkbox (on/off).
-4. The app must work **online and offline**: it is an installable web app (PWA) that
-   teachers install from the website on laptop and mobile; after the first visit it works
-   without internet.
-5. Number of questions: buttons 10 / 15 / 25 plus a Custom box; Custom accepts 1-30.
-   Values above 30 or below 1 show "Enter a number from 1 to 30" and block Generate.
-6. PDF: browser print (Print → "Save as PDF" or a printer). No Playwright.
-   On phones the same Print button opens the phone's print / save-as-PDF screen.
+### Paper layout (A4) – kept from the old plan
+Header (school, class, subject, chapter, date, total marks, time, Name / Roll No);
+sections A MCQs, B Short, C Long with marks per section. Answer key = separate
+printout with answers, book page and (checkbox) SLO codes. Generated-question notes
+appear in the answer key only (open question 5).
 
-### Open questions
-None right now.
+### Open questions (Izan / customer)
+1. The brief says Chapter 1 SLOs are S-07-A-01 to S-07-A-08. Our Chapter 1 ("Plant System")
+   has **9** SLOs with no codes. Does the book print codes and levels? Which chapter is meant?
+2. Cognitive level is per SLO. When an exercise question maps to two SLOs with different
+   levels, which level does it get? Proposal: the level of its main (first) SLO.
+3. How many extra MCQs is "modest"? Proposal: 2 per SLO (about 18).
+4. Exercise Short Q5 refers to a picture. Leave it out, keep it with "(diagram in book)",
+   or print the picture?
+5. Do generated-question notes appear on the student paper or only in the answer key?
+6. The old plan made the app work offline on phones (ADR 0003). A backend means a server
+   must run. For the demo: run on one laptop (`npm run dev`) and keep offline install for later?
+7. Long-question marks: 5? Short questions with parts (a, b, c): still 2 marks?
 
 ### Risks
-- Low-text SLOs (Ch1 SLO 1 "label parts" needs diagrams; SLO 9 has about one
-  paragraph) will often give fewer questions than requested. This is intended.
-- The SLO→page map is a judgment call. Mitigations: Izan confirms, and self-review checks each question's SLO fit.
-- Cut-off words and book typos ("2 ATD", "reveres") reduce quotable facts.
+- Small bank (about 28 exercise questions + extras): Swap will often be disabled and
+  difficulty fallback will happen often. This is expected; the notes explain it.
+- Cut-off words in the scan (two exercise spots) need Izan to read the physical book.
 
 ## Folder layout
 ```
 book/            scanned PDF (git-ignored)
 docs/            PLAN.md, adr/
-pipeline/        Python: render pages, schemas, build text, validator, reports, tests
+pipeline/        Python: render pages, schemas, build text, validator, build_bank, tests
 data/pages/      page images (git-ignored)
 data/book.json   chapters + page ranges
-data/chXX/       slos.txt/slos.json (typed by Izan), slo_pages.json, pages/, text.json, questions.json
-web/             Next.js app (to be built)
+data/chXX/       slos.txt/json, slo_pages.json, pages/, text.json, exercise.json, bank.json, coverage.md
+web/             Next.js app: UI + backend route handlers (web/lib/server/ holds all selection logic)
 ```
-
-Question record: `id, chapter, slo_id, type (mcq|true_false|short), question,
-options[], answer, marks, page, source_excerpt, review_status, review_note`.
