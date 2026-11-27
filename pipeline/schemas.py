@@ -168,6 +168,33 @@ class ChapterExercise(BaseModel):
     items: list[ExerciseItem] = Field(min_length=1)
 
 
+class MappingEntry(BaseModel):
+    """data/chXX/mapping.json: which SLO code(s) one exercise item covers, and why."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    slo_ids: list[str] = Field(min_length=1)  # first = main code (sets the level)
+    pages: list[int] = Field(min_length=1)  # book pages that teach it
+    reason: str = Field(min_length=10)
+    answer_risk: str = ""  # why the answer may be hard to quote from the book
+
+    @field_validator("slo_ids")
+    @classmethod
+    def codes_ok(cls, codes: list[str]) -> list[str]:
+        if any(not re.match(SLO_CODE_PATTERN, c) for c in codes) or len(codes) != len(set(codes)):
+            raise ValueError("slo_ids must be different codes like S-07-A-01")
+        return codes
+
+
+class ChapterMapping(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    chapter: int = Field(ge=1, le=12)
+    status: Literal["proposed", "approved"]
+    note: str = ""
+    items: dict[str, MappingEntry]
+
+
 class FigureCrop(BaseModel):
     """data/chXX/figures.json entry: which page image and pixel box a figure is cut from."""
 
