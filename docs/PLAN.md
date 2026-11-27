@@ -28,7 +28,7 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 ## Phase 1 – Chapter 1 data (bank JSON + coverage report)
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 1.1 | Add each SLO's **code** and **cognitive level** from the client's coded SLO list → `slos.txt` / `slos.json`; level groups → `data/levels.json` | Schema check passes; Izan confirms codes and levels | M (Izan + Claude) | doing (codes and groups known; waiting for the 8 levels) |
+| 1.1 | Add each SLO's **code** and **cognitive level** from the client's coded SLO list → `slos.txt` / `slos.json`; level groups → `data/levels.json` | Schema check passes; Izan confirms codes and levels | M (Izan + Claude) | done (2026-11-27: 9 book SLOs → 8 codes; 35 tests pass) |
 | 1.2 | Schema v2 + validator + tests: `slo_ids[]`, type `mcq|short|long`, `cognitive_level`, `source` exercise/generated, `generated_note`, answer quote | pytest passes incl. new cases (note on exercise question → error; generated without note → error; unknown SLO or level → error) | M | todo |
 | 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; crop the Short Q5 picture → `web/public/figures/ch01-short05.png` (committed) | Validator passes; picture crop looks right | M | todo (the 2 unclear spots were fixed from the book on 2026-11-26) |
 | 1.4 | Map every exercise question to its SLO(s) → `data/ch01/coverage.md` (question → SLO table + uncovered SLOs) | Every exercise question mapped; Izan approves the mapping | M | todo |
@@ -80,7 +80,7 @@ question_page, answer_page, answer_excerpt`.
   Exercise questions: empty.
 - `slo_ids` hold the client's **codes** (S-07-A-01 …). Book SLOs 6 and 7 share S-07-A-06,
   so Chapter 1 has 9 book SLOs but 8 codes; the app lists the 8 codes.
-- `cognitive_level` comes from the client's coded SLO list, never invented (open question 1).
+- `cognitive_level` = level of the question's first code in `slos.json`, never invented.
 - Marks: MCQ 1, Short 2, Long 5 (approved).
 
 ### How a paper is built (backend, no AI)
@@ -126,11 +126,13 @@ generated-question notes, and (checkbox) SLO codes.
 9. Exercise unclear spots read from the book: MCQ 4 d = "mesophyll tissues";
    MCQ 10 = "…if there would be no photosynthesis?".
 
+10. Levels per code (client, 2026-11-27): 01 Evaluate, 02 Understanding, 03 Knowledge,
+    04 Knowledge, 05 Understanding, 06 Understanding, 07 Evaluate, 08 Evaluate.
+11. A question that maps to several codes takes the level of its **first** code.
+12. A short question with parts (a, b, c) is still 2 marks in total.
+
 ### Open questions (Izan / client)
-1. The cognitive level of each of the 8 codes (from the client's list).
-2. When an exercise question maps to two codes with different levels, which level does
-   it get? Proposal: the level of its main (first) code.
-3. Short questions with parts (a, b, c): still 2 marks in total?
+None right now.
 
 ### Risks
 - Small bank (about 28 exercise questions + extras): Swap will often be disabled and

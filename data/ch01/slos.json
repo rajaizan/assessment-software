@@ -2,13 +2,15 @@
   "chapter": 1,
   "title": "Plant System",
   "printed_page": 1,
-  "source": "Typed by Izan from the physical book",
+  "source": "Statements typed by Izan from the physical book; codes and levels from the client's coded SLO list",
   "pages_status": "confirmed",
   "slos": [
     {
       "id": "ch01-slo01",
       "number": 1,
       "text": "Explain the root and shoot system in plants. Label different parts of leaf, stem and root (external and internal structure).",
+      "code": "S-07-A-01",
+      "level": "Evaluate",
       "pages": [
         2,
         3,
@@ -24,6 +26,8 @@
       "id": "ch01-slo02",
       "number": 2,
       "text": "Predict the role of xylem and phloem in transport of water and food in plants by observing the cross section of the stem.",
+      "code": "S-07-A-02",
+      "level": "Understanding",
       "pages": [
         3,
         4,
@@ -38,6 +42,8 @@
       "id": "ch01-slo03",
       "number": 3,
       "text": "Define the process of photosynthesis and derive word equation for it.",
+      "code": "S-07-A-03",
+      "level": "Knowledge",
       "pages": [
         13,
         17
@@ -47,6 +53,8 @@
       "id": "ch01-slo04",
       "number": 4,
       "text": "Know that plants require minerals to maintain healthy growth and life processes (limited to magnesium to make chlorophyll and nitrates to make protein).",
+      "code": "S-07-A-04",
+      "level": "Knowledge",
       "pages": [
         16,
         17
@@ -56,6 +64,8 @@
       "id": "ch01-slo05",
       "number": 5,
       "text": "Explain that the structure of leaves is adapted to the process of photosynthesis.",
+      "code": "S-07-A-05",
+      "level": "Understanding",
       "pages": [
         7,
         8,
@@ -67,6 +77,8 @@
       "id": "ch01-slo06",
       "number": 6,
       "text": "Describe the process of respiration and write word equation for it.",
+      "code": "S-07-A-06",
+      "level": "Understanding",
       "pages": [
         14,
         15,
@@ -77,6 +89,8 @@
       "id": "ch01-slo07",
       "number": 7,
       "text": "Compare and contrast the process of photosynthesis and respiration.",
+      "code": "S-07-A-06",
+      "level": "Understanding",
       "pages": [
         15,
         16
@@ -86,6 +100,8 @@
       "id": "ch01-slo08",
       "number": 8,
       "text": "Investigate the phenomenon of transpiration and its importance in plants (wind, temperature, light, humidity affecting rate of transpiration in plants).",
+      "code": "S-07-A-07",
+      "level": "Evaluate",
       "pages": [
         9,
         10,
@@ -98,6 +114,8 @@
       "id": "ch01-slo09",
       "number": 9,
       "text": "Explore and apply natural raise of water based on the principle of transpiration.",
+      "code": "S-07-A-08",
+      "level": "Evaluate",
       "pages": [
         10,
         11

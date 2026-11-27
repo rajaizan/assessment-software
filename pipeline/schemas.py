@@ -19,12 +19,42 @@ TextPart = Literal["content", "slo_list", "key_points", "exercise"]
 QUOTABLE_PARTS: frozenset[str] = frozenset({"content", "key_points"})
 
 
+LevelGroup = Literal["lower", "middle", "higher"]
+SLO_CODE_PATTERN = r"^S-\d{2}-[A-Z]-\d{2}$"  # client's code, e.g. S-07-A-06
+
+
+class LevelGroups(BaseModel):
+    """data/levels.json: the client's cognitive levels, grouped for difficulty presets."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    source: str
+    groups: dict[LevelGroup, list[str]]
+
+    @model_validator(mode="after")
+    def every_group_once(self) -> "LevelGroups":
+        if set(self.groups) != {"lower", "middle", "higher"}:
+            raise ValueError("levels.json needs exactly the groups lower, middle, higher")
+        names = [name for names in self.groups.values() for name in names]
+        if not all(names) or len(names) != len(set(names)):
+            raise ValueError("each level name must be non-empty and in exactly one group")
+        return self
+
+    def group_of(self, level: str) -> LevelGroup | None:
+        for group, names in self.groups.items():
+            if level in names:
+                return group
+        return None
+
+
 class Slo(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     id: str = Field(pattern=r"^ch\d{2}-slo\d{2}$")
     number: int = Field(ge=1)
     text: str = Field(min_length=10)
+    code: str = Field(pattern=SLO_CODE_PATTERN)  # from the client's coded SLO list
+    level: str = Field(min_length=1)  # cognitive level from the client's list
     pages: list[int] = Field(min_length=1)  # printed pages that teach this SLO
 
     @field_validator("text")
@@ -58,7 +88,16 @@ class ChapterSlos(BaseModel):
         for expected, slo in enumerate(slos, start=1):
             if slo.number != expected:
                 raise ValueError(f"SLO numbers must be 1, 2, 3...; got {slo.number} at position {expected}")
+        level_of_code: dict[str, str] = {}
+        for slo in slos:
+            known = level_of_code.setdefault(slo.code, slo.level)
+            if known != slo.level:
+                raise ValueError(f"{slo.code} has two different levels: {known} and {slo.level}")
         return slos
+
+    def unknown_levels(self, levels: LevelGroups) -> list[str]:
+        """Levels used here that are not in levels.json (must be empty)."""
+        return sorted({s.level for s in self.slos if levels.group_of(s.level) is None})
 
 
 BLOCK_KINDS = ("heading", "paragraph", "list_item", "figure", "box", "table", "table_row")
