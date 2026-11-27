@@ -22,14 +22,14 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 | 4 | Izan typed the Chapter 1 SLOs → `data/ch01/slos.json` (9 SLOs, statements only) | Kept. Codes and cognitive levels from the client's list are added in task 1.1. |
 | 5 | Chapter 1 transcribed → `data/ch01/pages/b001-b019.txt`, `text.json` (202 blocks, incl. the exercise on book pages 18-19) | The exercise questions are already transcribed. The chapter text is the source for answers and extra MCQs. |
 | 7-8 | Question schema, validator (outside words, fake SLO, quote must match the page), 25 pytest tests; SLO→page map confirmed by Izan | Schema changes (task 1.2); the checks stay. |
-| 9-10a | 174 Claude-written questions (57 MCQ, 63 T/F, 54 Short), self-reviewed | **Not the bank any more.** The best MCQs can become the "extra MCQs" (task 1.6). T/F and Short are kept in git history only. |
+| 9-10a | 174 Claude-written questions (57 MCQ, 63 T/F, 54 Short), self-reviewed | **Not the bank any more.** Kept as `data/ch01/legacy_v1_questions.json` (old format) so the best MCQs can become the "extra MCQs" (task 1.6). The v1-only scripts (add_questions, capacity_report, spot_check) were removed; they are in git history. |
 | 10b, 10c, 11-14a (old) | Spot-check, review page, old app plan | **Dropped / replaced** by the phases below. |
 
 ## Phase 1 – Chapter 1 data (bank JSON + coverage report)
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
 | 1.1 | Add each SLO's **code** and **cognitive level** from the client's coded SLO list → `slos.txt` / `slos.json`; level groups → `data/levels.json` | Schema check passes; Izan confirms codes and levels | M (Izan + Claude) | done (2026-11-27: 9 book SLOs → 8 codes; 35 tests pass) |
-| 1.2 | Schema v2 + validator + tests: `slo_ids[]`, type `mcq|short|long`, `cognitive_level`, `source` exercise/generated, `generated_note`, answer quote | pytest passes incl. new cases (note on exercise question → error; generated without note → error; unknown SLO or level → error) | M | todo |
+| 1.2 | Schema v2 + validator + tests: `slo_ids[]`, type `mcq|short|long`, `cognitive_level`, `source` exercise/generated, `generated_note`, answer quote | pytest passes incl. new cases (note on exercise question → error; generated without note → error; unknown SLO or level → error) | M | done (2026-11-27: 53 tests; exercise text must match the book; coverage rules checked) |
 | 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; crop the Short Q5 picture → `web/public/figures/ch01-short05.png` (committed) | Validator passes; picture crop looks right | M | todo (the 2 unclear spots were fixed from the book on 2026-11-26) |
 | 1.4 | Map every exercise question to its SLO(s) → `data/ch01/coverage.md` (question → SLO table + uncovered SLOs) | Every exercise question mapped; Izan approves the mapping | M | todo |
 | 1.5 | Answers for exercise questions, each from the chapter text with its page and quote (MCQ: correct option; Short/Long: model answer) | Validator passes; every answer has a page and a quote | M | todo |
@@ -74,7 +74,8 @@ exercise → mapping → bank, using the Phase 1 pipeline unchanged. Later still
 ### Question record (`bank.json`)
 `id, chapter, type (mcq|short|long), text, options[] (MCQ), answer, marks,
 slo_ids[], cognitive_level, source (exercise|generated), generated_note,
-question_page, answer_page, answer_excerpt`.
+question_page, answer_sources[{page, excerpt}], figure (optional), review_status, review_note`.
+Schema: `pipeline/schemas.py` (`Question`); checks: `pipeline/validate_questions.py`.
 - `generated_note` example: "(Newly generated - SLO <code>, not covered in exercise)".
   For extra MCQs when every SLO is covered: "(Newly generated - SLO <code>, extra MCQ)".
   Exercise questions: empty.

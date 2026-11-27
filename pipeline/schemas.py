@@ -1,20 +1,22 @@
 """Data schemas for the pipeline. Every JSON file in data/ is checked against these.
 
-There are no topics (ADR 0002): questions link to one SLO, and each SLO lists the
-book pages that teach it.
+There are no topics (ADR 0002). The question bank is the chapter exercise mapped to
+the client's SLO codes, plus a few generated questions (ADR 0004).
 """
 
 from __future__ import annotations
 
+import re
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
-QuestionType = Literal["mcq", "true_false", "short"]
-MARKS: dict[str, int] = {"mcq": 1, "true_false": 1, "short": 2}
+QuestionType = Literal["mcq", "short", "long"]
+MARKS: dict[str, int] = {"mcq": 1, "short": 2, "long": 5}
+QuestionSource = Literal["exercise", "generated"]
 
-# Which part of the chapter a text block belongs to. Only QUOTABLE_PARTS may be a
-# question's source; exercise questions and the SLO list are never quoted as facts.
+# Which part of the chapter a text block belongs to. Only QUOTABLE_PARTS may be an
+# answer's source; exercise questions and the SLO list are never quoted as facts.
 TextPart = Literal["content", "slo_list", "key_points", "exercise"]
 QUOTABLE_PARTS: frozenset[str] = frozenset({"content", "key_points"})
 
@@ -131,24 +133,53 @@ class ChapterText(BaseModel):
     blocks: list[TextBlock] = Field(min_length=1)
 
 
+def generated_note(code: str, all_codes_covered: bool) -> str:
+    """The exact bracketed note a generated question must carry (CLAUDE.md bank rule 5)."""
+    reason = "extra MCQ" if all_codes_covered else "not covered in exercise"
+    return f"(Newly generated - SLO {code}, {reason})"
+
+
+class AnswerSource(BaseModel):
+    """Where an answer comes from: a printed page and the exact words on it."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    page: int = Field(ge=1)
+    excerpt: str = Field(min_length=15)
+
+
 class Question(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     id: str = Field(pattern=r"^ch\d{2}-q\d{3}$")
     chapter: int = Field(ge=1, le=12)
-    slo_id: str = Field(pattern=r"^ch\d{2}-slo\d{2}$")
     type: QuestionType
-    question: str = Field(min_length=5)
+    text: str = Field(min_length=5)
     options: list[str] = Field(default_factory=list)
     answer: str = Field(min_length=1)
     marks: int
-    page: int = Field(ge=1)  # printed page number of the source excerpt
-    source_excerpt: str = Field(min_length=15)
+    slo_ids: list[str] = Field(min_length=1)  # client codes; the first is the main one
+    cognitive_level: str = Field(min_length=1)  # = level of the first code
+    source: QuestionSource
+    generated_note: str = ""  # empty for exercise questions
+    question_page: int = Field(ge=1)  # exercise: page it is printed on; generated: page it is based on
+    answer_sources: list[AnswerSource] = Field(min_length=1)
+    figure: str | None = Field(default=None, pattern=r"^figures/ch\d{2}-[a-z0-9-]+\.png$")
     review_status: Literal["pending", "approved", "rejected"] = "pending"
     review_note: str = ""
 
+    @field_validator("slo_ids")
+    @classmethod
+    def codes_ok(cls, codes: list[str]) -> list[str]:
+        for code in codes:
+            if not re.match(SLO_CODE_PATTERN, code):
+                raise ValueError(f"{code!r} is not an SLO code like S-07-A-01")
+        if len(codes) != len(set(codes)):
+            raise ValueError("slo_ids must not repeat a code")
+        return codes
+
     @model_validator(mode="after")
-    def rules_for_type(self) -> "Question":
+    def rules_for_type_and_source(self) -> "Question":
         if self.marks != MARKS[self.type]:
             raise ValueError(f"a {self.type} question is worth {MARKS[self.type]} mark(s)")
         if self.type == "mcq":
@@ -158,11 +189,12 @@ class Question(BaseModel):
                 raise ValueError("MCQ options must all be different")
             if self.answer not in self.options:
                 raise ValueError("MCQ answer must be one of the options, word for word")
-        else:
-            if self.options:
-                raise ValueError(f"a {self.type} question must not have options")
-            if self.type == "true_false" and self.answer not in ("True", "False"):
-                raise ValueError("a true_false answer must be 'True' or 'False'")
+        elif self.options:
+            raise ValueError(f"a {self.type} question must not have options")
+        if self.source == "exercise" and self.generated_note:
+            raise ValueError("an exercise question must not have a generated_note")
+        if self.source == "generated" and not self.generated_note:
+            raise ValueError("a generated question needs its generated_note")
         return self
 
 
