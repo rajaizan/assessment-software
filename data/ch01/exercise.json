@@ -1,0 +1,346 @@
+{
+  "chapter": 1,
+  "source": "Copied from the chapter exercise in text.json",
+  "items": [
+    {
+      "id": "ch01-ex-a01",
+      "section": "A",
+      "number": 1,
+      "type": "mcq",
+      "text": "Which of the following processes is responsible to provide raw material for Respiration?",
+      "options": [
+        "Photosynthesis",
+        "Diffusion",
+        "Translocation",
+        "a and b"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a02",
+      "section": "A",
+      "number": 2,
+      "type": "mcq",
+      "text": "The area of young roots where most of the absorption takes place is:",
+      "options": [
+        "root epidermis",
+        "root hair",
+        "root cortex",
+        "root vascular bundles"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a03",
+      "section": "A",
+      "number": 3,
+      "type": "mcq",
+      "text": "Which feature is specialized in the prevention of water loss in leaves?",
+      "options": [
+        "Waxy cuticle",
+        "Root hair",
+        "Epidermis",
+        "Stomata"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a04",
+      "section": "A",
+      "number": 4,
+      "type": "mcq",
+      "text": "The process of photosynthesis takes place in:",
+      "options": [
+        "ground tissues",
+        "dermal tissues",
+        "vascular tissues",
+        "mesophyll tissues"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a05",
+      "section": "A",
+      "number": 5,
+      "type": "mcq",
+      "text": "Which structure of the plant transports sugar?",
+      "options": [
+        "Mesophyll cells",
+        "Lower xylem",
+        "Phloem",
+        "Xylem"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a06",
+      "section": "A",
+      "number": 6,
+      "type": "mcq",
+      "text": "Which cells keep the stem from breaking when bent? Choose the cell and reason",
+      "options": [
+        "Parenchyma-photosynthetic",
+        "Sclerenchyma-hard and stiff",
+        "Collenchyma-flexible",
+        "Xylem-long cells"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a07",
+      "section": "A",
+      "number": 7,
+      "type": "mcq",
+      "text": "In which organelle of the plant cell, process of respiration takes places?",
+      "options": [
+        "Nucleus",
+        "Mitochondrion",
+        "Chloroplast",
+        "Vacoule"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a08",
+      "section": "A",
+      "number": 8,
+      "type": "mcq",
+      "text": "The importance of respiration in plants is that:",
+      "options": [
+        "it provides oxygen to plants.",
+        "it provides energy.",
+        "it releases carbon dioxide.",
+        "all of the above"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a09",
+      "section": "A",
+      "number": 9,
+      "type": "mcq",
+      "text": "Choose the correct function of a leaf:",
+      "options": [
+        "to conduct photosynthesis",
+        "to restore sunlight",
+        "to release the CO2",
+        "the use of energy"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a10",
+      "section": "A",
+      "number": 10,
+      "type": "mcq",
+      "text": "Which gas would increase in the atmosphere if there would be no photosynthesis?",
+      "options": [
+        "Nitrogen",
+        "Carbon dioxide",
+        "Oxygen",
+        "Hydrogen"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a11",
+      "section": "A",
+      "number": 11,
+      "type": "mcq",
+      "text": "Which is the main product of photosynthesis?",
+      "options": [
+        "Glucose",
+        "Oxygen",
+        "Energy",
+        "Pyruvic acid"
+      ],
+      "question_page": 18,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-a12",
+      "section": "A",
+      "number": 12,
+      "type": "mcq",
+      "text": "Which of the following mineral is required by the plant cell to capture energy?",
+      "options": [
+        "Calcium",
+        "Potassium",
+        "Magnesium",
+        "Nitrates"
+      ],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b01",
+      "section": "B",
+      "number": 1,
+      "type": "short",
+      "text": "How does sunlight help plants in making glucose? Answer with an equation.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b02",
+      "section": "B",
+      "number": 2,
+      "type": "short",
+      "text": "How will the following conditions affect the rate of transpiration? a. Rainy season b. A hot afternoon c. Cold winds",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b03",
+      "section": "B",
+      "number": 3,
+      "type": "short",
+      "text": "Why are the phloem vessels perforated?",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b04",
+      "section": "B",
+      "number": 4,
+      "type": "short",
+      "text": "a. Name the factors that help in the movement of water in long xylem tubes. b. Define transpiration.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b05",
+      "section": "B",
+      "number": 5,
+      "type": "short",
+      "text": "a. Highlight the dermal tissues in the given picture of the plant structure. b. Mention their functions. c. How will it affect the plants' functions if the dermal tissues be removed from the leaf cells?",
+      "options": [],
+      "question_page": 19,
+      "figure": "figures/ch01-short05.png"
+    },
+    {
+      "id": "ch01-ex-b06",
+      "section": "B",
+      "number": 6,
+      "type": "short",
+      "text": "a. What is anaerobic respiration? b. Where does it take place in the cell? c. Give a word equation of anaerobic respiration.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b07",
+      "section": "B",
+      "number": 7,
+      "type": "short",
+      "text": "a. Define translocation. b. Enlist the cells involved in the process of food translocation.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b08",
+      "section": "B",
+      "number": 8,
+      "type": "short",
+      "text": "Define tertiary roots.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b09",
+      "section": "B",
+      "number": 9,
+      "type": "short",
+      "text": "What is the role of stomata in leaves?",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b10",
+      "section": "B",
+      "number": 10,
+      "type": "short",
+      "text": "How is food transported in plant?",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b11",
+      "section": "B",
+      "number": 11,
+      "type": "short",
+      "text": "What is the role of nitrates in plants?",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-b12",
+      "section": "B",
+      "number": 12,
+      "type": "short",
+      "text": "Why is the photosynthesis important for plants and humans?",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-c01",
+      "section": "C",
+      "number": 1,
+      "type": "long",
+      "text": "How does the structure of leaves facilitate the process of photosynthesis?",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-c02",
+      "section": "C",
+      "number": 2,
+      "type": "long",
+      "text": "Explain the process of respiration and draw a word equation for the process.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-c03",
+      "section": "C",
+      "number": 3,
+      "type": "long",
+      "text": "Make a comparison between photosynthesis and respiration.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    },
+    {
+      "id": "ch01-ex-c04",
+      "section": "C",
+      "number": 4,
+      "type": "long",
+      "text": "How does the structure of the roots, stem and leaves of the plant permit the movement of food, water and gases? Discuss each part separately.",
+      "options": [],
+      "question_page": 19,
+      "figure": null
+    }
+  ]
+}

@@ -133,6 +133,52 @@ class ChapterText(BaseModel):
     blocks: list[TextBlock] = Field(min_length=1)
 
 
+FIGURE_PATTERN = r"^figures/ch\d{2}-[a-z0-9-]+\.png$"  # relative to web/public/
+
+
+class ExerciseItem(BaseModel):
+    """One question of the chapter's own exercise, copied exactly as printed."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(pattern=r"^ch\d{2}-ex-[a-z]\d{2}$")  # e.g. ch01-ex-b05 = section B, question 5
+    section: str = Field(pattern=r"^[A-Z]$")
+    number: int = Field(ge=1)
+    type: QuestionType
+    text: str = Field(min_length=5)
+    options: list[str] = Field(default_factory=list)
+    question_page: int = Field(ge=1)
+    figure: str | None = Field(default=None, pattern=FIGURE_PATTERN)
+
+    @model_validator(mode="after")
+    def options_for_type(self) -> "ExerciseItem":
+        if (self.type == "mcq") != bool(self.options) or (self.options and len(self.options) != 4):
+            raise ValueError("an exercise MCQ has exactly 4 options; other types have none")
+        for value in (self.text, *self.options):
+            if "UNREADABLE" in value or re.search(r"\[[^\]]*\?", value):
+                raise ValueError(f"cut-off text must be read from the book first: {value!r}")
+        return self
+
+
+class ChapterExercise(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    chapter: int = Field(ge=1, le=12)
+    source: str
+    items: list[ExerciseItem] = Field(min_length=1)
+
+
+class FigureCrop(BaseModel):
+    """data/chXX/figures.json entry: which page image and pixel box a figure is cut from."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    file: str = Field(pattern=FIGURE_PATTERN)
+    pdf_page: int = Field(ge=1)
+    box: tuple[int, int, int, int]  # left, top, right, bottom in the page image's pixels
+    item: str = Field(pattern=r"^ch\d{2}-ex-[a-z]\d{2}$")  # exercise item that shows it
+
+
 def generated_note(code: str, all_codes_covered: bool) -> str:
     """The exact bracketed note a generated question must carry (CLAUDE.md bank rule 5)."""
     reason = "extra MCQ" if all_codes_covered else "not covered in exercise"
@@ -164,7 +210,7 @@ class Question(BaseModel):
     generated_note: str = ""  # empty for exercise questions
     question_page: int = Field(ge=1)  # exercise: page it is printed on; generated: page it is based on
     answer_sources: list[AnswerSource] = Field(min_length=1)
-    figure: str | None = Field(default=None, pattern=r"^figures/ch\d{2}-[a-z0-9-]+\.png$")
+    figure: str | None = Field(default=None, pattern=FIGURE_PATTERN)
     review_status: Literal["pending", "approved", "rejected"] = "pending"
     review_note: str = ""
 

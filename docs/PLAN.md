@@ -30,7 +30,7 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 |---|---|---|---|---|
 | 1.1 | Add each SLO's **code** and **cognitive level** from the client's coded SLO list → `slos.txt` / `slos.json`; level groups → `data/levels.json` | Schema check passes; Izan confirms codes and levels | M (Izan + Claude) | done (2026-11-27: 9 book SLOs → 8 codes; 35 tests pass) |
 | 1.2 | Schema v2 + validator + tests: `slo_ids[]`, type `mcq|short|long`, `cognitive_level`, `source` exercise/generated, `generated_note`, answer quote | pytest passes incl. new cases (note on exercise question → error; generated without note → error; unknown SLO or level → error) | M | done (2026-11-27: 53 tests; exercise text must match the book; coverage rules checked) |
-| 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; crop the Short Q5 picture → `web/public/figures/ch01-short05.png` (committed) | Validator passes; picture crop looks right | M | todo (the 2 unclear spots were fixed from the book on 2026-11-26) |
+| 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; crop the Short Q5 picture → `web/public/figures/ch01-short05.png` (committed) | Validator passes; picture crop looks right | M | done (2026-11-27: 28 items = 12 MCQ, 12 short, 4 long; `pipeline/extract_exercise.py`, crop box in `data/ch01/figures.json`; 63 tests) |
 | 1.4 | Map every exercise question to its SLO(s) → `data/ch01/coverage.md` (question → SLO table + uncovered SLOs) | Every exercise question mapped; Izan approves the mapping | M | todo |
 | 1.5 | Answers for exercise questions, each from the chapter text with its page and quote (MCQ: correct option; Short/Long: model answer) | Validator passes; every answer has a page and a quote | M | todo |
 | 1.6 | Extra questions by the rules: all SLOs covered → **1 extra MCQ per SLO code** (8; reuse the best of the 57); SLO uncovered → new questions for that SLO only. Each with its bracketed note | Validator passes; coverage report updated | M | todo |
@@ -147,6 +147,7 @@ docs/            PLAN.md, adr/
 pipeline/        Python: render pages, schemas, build text, validator, build_bank, tests
 data/pages/      page images (git-ignored)
 data/book.json   chapters + page ranges
-data/chXX/       slos.txt/json, slo_pages.json, pages/, text.json, exercise.json, bank.json, coverage.md
+data/chXX/       slos.txt/json, slo_pages.json, pages/, text.json, figures.json, exercise.json, bank.json, coverage.md
+data/levels.json cognitive levels → lower / middle / higher
 web/             Next.js app: UI + backend route handlers (web/lib/server/ holds all selection logic)
 ```
