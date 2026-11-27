@@ -1,6 +1,6 @@
 # Chapter 1 – exercise coverage report
 
-Mapping status: **proposed**. First code = main code (sets the level).
+Mapping status: **approved**. First code = main code (sets the level).
 
 ## Question → SLO
 

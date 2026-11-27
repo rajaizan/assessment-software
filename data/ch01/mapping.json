@@ -1,7 +1,7 @@
 {
   "chapter": 1,
-  "status": "proposed",
-  "note": "Proposed by Claude from the chapter text; Izan approves (task 1.4). First code = main code (sets the level). pages = book pages that teach it.",
+  "status": "approved",
+  "note": "Proposed by Claude from the chapter text; approved by Izan 2026-11-27 (task 1.4). First code = main code (sets the level). pages = book pages that teach it.",
   "items": {
     "ch01-ex-a01": {"slo_ids": ["S-07-A-06"], "pages": [15], "reason": "Photosynthesis gives the raw material for respiration: comparing the two processes."},
     "ch01-ex-a02": {"slo_ids": ["S-07-A-01"], "pages": [5], "reason": "Root hair: external and internal structure of the root."},
