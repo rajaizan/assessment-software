@@ -1,6 +1,6 @@
 # ADR 0004: Exercise-based question bank, selection in the backend
 
-Date: 2026-11-25 · Status: proposed (waiting for Izan's approval)
+Date: 2026-11-25 · Status: accepted (Izan and client, 2026-11-26)
 
 ## Context
 A customer meeting changed the plan. The customer does not want a large bank of
@@ -23,6 +23,7 @@ the chapter's SLOs, with a working one-chapter prototype for stakeholders first.
 
 ## Consequences
 - Much smaller bank: Swap is often disabled and difficulty fallback is common.
-- The app needs a running server, so the offline install from ADR 0003 is on hold
-  until Izan / the customer decide.
-- Izan must type SLO codes and cognitive levels from the book.
+- The app needs a running server. For the demo it runs on one laptop; the offline
+  install from ADR 0003 comes later.
+- The book prints no SLO codes or levels. They come from the client's coded SLO list,
+  typed by Izan. One code can cover several book SLOs.

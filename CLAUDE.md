@@ -16,8 +16,10 @@ Plan and status: docs/PLAN.md. Big decisions: docs/adr/ (latest: ADR 0004).
 ## Truth rules (most important)
 1. The book is the only source. Never use outside knowledge, facts or terms.
 2. Never invent SLOs, SLO codes, cognitive levels, terms, page numbers or quotes.
-3. SLOs (code, statement, cognitive level) come ONLY from data/chXX/slos.json,
-   typed by Izan from the book's SLO table.
+3. SLOs come ONLY from data/chXX/slos.json, typed by Izan: statements from the book's
+   SLO list; codes and cognitive levels from the client's coded SLO list (the book prints
+   none). One code can cover several book SLOs (Ch1: S-07-A-06 = book SLOs 6 + 7).
+   Level groups for difficulty: data/levels.json.
 4. If text is cut off, blurry or unclear, write UNREADABLE. Never guess.
 5. Page numbers = printed book page numbers; also store the PDF page index.
 6. If unsure, stop and ask Izan.
@@ -26,8 +28,8 @@ Plan and status: docs/PLAN.md. Big decisions: docs/adr/ (latest: ADR 0004).
 1. The bank starts from the chapter's own exercise (MCQ, short, long), copied exactly.
 2. Map every exercise question to the SLO(s) it covers (slo_ids[]). Write a coverage
    report: question → SLO table, plus uncovered SLOs.
-3. If the exercise covers ALL SLOs: keep all exercise questions and add only a modest
-   number of extra MCQs. Add NO new short or long questions.
+3. If the exercise covers ALL SLOs: keep all exercise questions and add 1 extra MCQ
+   per SLO code. Add NO new short or long questions.
 4. If an SLO is uncovered: keep all exercise questions and write new questions only
    for the uncovered SLOs.
 5. Self-written questions use only the chapter's content and words, in short, simple
@@ -47,6 +49,8 @@ Plan and status: docs/PLAN.md. Big decisions: docs/adr/ (latest: ADR 0004).
 - Every selected SLO gets at least one question. Random selection, no duplicates.
 - Difficulty presets are targets: fill from the nearest level and say so.
 - Counts above what the bank holds: "Can't generate more questions from the selected SLOs."
+- The printed student paper never shows SLO codes, cognitive levels or generated-question
+  notes. Levels show on the review screen; levels, notes and codes go in the answer key.
 
 ## How to work
 - One task from docs/PLAN.md at a time. Check its "done when" test before calling it done.
@@ -73,7 +77,8 @@ buttons. Every visible control must work; "coming soon" items are visibly disabl
 - Every time you finish a prompt or get a feature working, immediately run
   `git add .`, `git commit -m "clear description"`, and `git push -u origin HEAD`
   so the branch is backed up to GitHub.
-- The book PDF and page images are git-ignored. Never commit them.
+- The book PDF and page images are git-ignored. Never commit them. Exception: small
+  cropped figures that a question needs (e.g. web/public/figures/ch01-short05.png).
 
 ## Using Anthropic API credits
 Not now. Claude Code itself reads page images and writes questions, chapter by

@@ -13,13 +13,13 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 > SLOs, plus a few extra questions written by Claude only where needed. No large
 > generated bank, no True/False. Selection logic lives in the backend.
 > Earlier changes: ADR 0002 (SLOs only, no topics), ADR 0003 (print and PWA; the PWA part is
-> on hold, see open question 6).
+> on hold: the demo runs on one laptop).
 
 ## Already done (still valid)
 | # | Work | Reused how |
 |---|---|---|
 | 0-3 | Tools installed; book PDF rendered to upright page images; `data/book.json` (12 chapters, page ranges) | Unchanged. Pipeline works for any chapter. |
-| 4 | Izan typed the Chapter 1 SLOs → `data/ch01/slos.json` (9 SLOs, statements only) | Kept. Needs SLO codes and cognitive levels added (task 1.1). |
+| 4 | Izan typed the Chapter 1 SLOs → `data/ch01/slos.json` (9 SLOs, statements only) | Kept. Codes and cognitive levels from the client's list are added in task 1.1. |
 | 5 | Chapter 1 transcribed → `data/ch01/pages/b001-b019.txt`, `text.json` (202 blocks, incl. the exercise on book pages 18-19) | The exercise questions are already transcribed. The chapter text is the source for answers and extra MCQs. |
 | 7-8 | Question schema, validator (outside words, fake SLO, quote must match the page), 25 pytest tests; SLO→page map confirmed by Izan | Schema changes (task 1.2); the checks stay. |
 | 9-10a | 174 Claude-written questions (57 MCQ, 63 T/F, 54 Short), self-reviewed | **Not the bank any more.** The best MCQs can become the "extra MCQs" (task 1.6). T/F and Short are kept in git history only. |
@@ -28,12 +28,12 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 ## Phase 1 – Chapter 1 data (bank JSON + coverage report)
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
-| 1.1 | Izan adds each SLO's **code** and **cognitive level** exactly as printed in the book's SLO table → `slos.txt` / `slos.json` | Schema check passes; Izan says it matches the book | M (Izan) | todo |
+| 1.1 | Add each SLO's **code** and **cognitive level** from the client's coded SLO list → `slos.txt` / `slos.json`; level groups → `data/levels.json` | Schema check passes; Izan confirms codes and levels | M (Izan + Claude) | doing (codes and groups known; waiting for the 8 levels) |
 | 1.2 | Schema v2 + validator + tests: `slo_ids[]`, type `mcq|short|long`, `cognitive_level`, `source` exercise/generated, `generated_note`, answer quote | pytest passes incl. new cases (note on exercise question → error; generated without note → error; unknown SLO or level → error) | M | todo |
-| 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; unclear spots = UNREADABLE until Izan checks them | Validator passes; Izan has fixed the unclear spots from the book | M | todo |
+| 1.3 | Exercise → `data/ch01/exercise.json`: exact printed text, options, page; crop the Short Q5 picture → `web/public/figures/ch01-short05.png` (committed) | Validator passes; picture crop looks right | M | todo (the 2 unclear spots were fixed from the book on 2026-11-26) |
 | 1.4 | Map every exercise question to its SLO(s) → `data/ch01/coverage.md` (question → SLO table + uncovered SLOs) | Every exercise question mapped; Izan approves the mapping | M | todo |
 | 1.5 | Answers for exercise questions, each from the chapter text with its page and quote (MCQ: correct option; Short/Long: model answer) | Validator passes; every answer has a page and a quote | M | todo |
-| 1.6 | Extra questions by the rules: all SLOs covered → a few extra MCQs only (reuse the best of the 57); SLO uncovered → new questions for that SLO only. Each with its bracketed note | Validator passes; coverage report updated | M | todo |
+| 1.6 | Extra questions by the rules: all SLOs covered → **1 extra MCQ per SLO code** (8; reuse the best of the 57); SLO uncovered → new questions for that SLO only. Each with its bracketed note | Validator passes; coverage report updated | M | todo |
 | 1.7 | `pipeline/build_bank.py N` → `data/chNN/bank.json` + coverage report; works for any chapter with no code changes | Running it for chapter 1 gives the bank; a dry run on chapter 2's folder fails only for missing data, not missing code | M | todo |
 | 1.8 | Izan spot-checks the bank (all generated questions + 5 exercise answers) | Problems fixed | M (Izan) | todo |
 
@@ -52,10 +52,10 @@ Owner is Claude unless marked "Izan". Status: todo / doing / done / dropped.
 | # | Task | Done when | Pri | Status |
 |---|---|---|---|---|
 | 3.1 | Book → chapter(s); only Ch1 active; selecting all chapters of a term shows "Term Exam – coming soon" (disabled) | Clicks work; disabled items explain why | M | todo |
-| 3.2 | SLO list with Select all, code and cognitive-level tag | Works on phone and laptop | M | todo |
+| 3.2 | SLO list (8 codes) with Select all, code and cognitive-level tag | Works on phone and laptop | M | todo |
 | 3.3 | Difficulty preset (Balanced / Easy / Challenging / Custom); Custom shows % per level with availability and a running total | Generate blocked until total = 100% | M | todo |
 | 3.4 | MCQ / Short / Long count rows with live max; over max → "Can't generate more questions from the selected SLOs." | Messages come from the backend | M | todo |
-| 3.5 | Review screen: Swap (disabled if none), Lock, Regenerate | Every button works | M | todo |
+| 3.5 | Review screen: Swap (disabled if none), Lock, Regenerate; each question shows its cognitive level | Every button works | M | todo |
 | 3.6 | Print paper / Print answer key buttons; loading, empty and error states | Manual check list passes | M | todo |
 
 ## Phase 4 – Demo polish and QA
@@ -78,8 +78,10 @@ question_page, answer_page, answer_excerpt`.
 - `generated_note` example: "(Newly generated - SLO <code>, not covered in exercise)".
   For extra MCQs when every SLO is covered: "(Newly generated - SLO <code>, extra MCQ)".
   Exercise questions: empty.
-- `cognitive_level` comes from the SLO table, never invented (rule in open question 2).
-- Marks (proposed): MCQ 1, Short 2, Long 5.
+- `slo_ids` hold the client's **codes** (S-07-A-01 …). Book SLOs 6 and 7 share S-07-A-06,
+  so Chapter 1 has 9 book SLOs but 8 codes; the app lists the 8 codes.
+- `cognitive_level` comes from the client's coded SLO list, never invented (open question 1).
+- Marks: MCQ 1, Short 2, Long 5 (approved).
 
 ### How a paper is built (backend, no AI)
 1. Pool = questions linked to at least one selected SLO.
@@ -90,37 +92,50 @@ question_page, answer_page, answer_excerpt`.
 4. No duplicate questions. Locked questions are kept on regenerate.
 5. Swap: another unused question with the same type, SLO and level; disabled if none.
 
-### Difficulty presets (proposed, % of questions per cognitive level)
+### Difficulty presets (approved, % of questions per level group)
 | Preset | Lower | Middle | Higher |
 |---|---|---|---|
 | Easy | 60 | 30 | 10 |
 | Balanced | 40 | 40 | 20 |
 | Challenging | 20 | 40 | 40 |
-Level names follow the book's SLO table once Izan has typed it.
+
+Level groups (client-approved): **Lower** = Knowledge; **Middle** = Understanding;
+**Higher** = Application, Analysis, Evaluate (anything above Understanding).
+Stored in `data/levels.json`.
 
 ### Paper layout (A4) – kept from the old plan
 Header (school, class, subject, chapter, date, total marks, time, Name / Roll No);
-sections A MCQs, B Short, C Long with marks per section. Answer key = separate
-printout with answers, book page and (checkbox) SLO codes. Generated-question notes
-appear in the answer key only (open question 5).
+sections A MCQs, B Short, C Long with marks per section. Short Q5 prints its picture.
+The student paper shows **no** SLO codes, cognitive levels or generated-question notes.
+Answer key = separate printout with answers, book page, cognitive level,
+generated-question notes, and (checkbox) SLO codes.
 
-### Open questions (Izan / customer)
-1. The brief says Chapter 1 SLOs are S-07-A-01 to S-07-A-08. Our Chapter 1 ("Plant System")
-   has **9** SLOs with no codes. Does the book print codes and levels? Which chapter is meant?
-2. Cognitive level is per SLO. When an exercise question maps to two SLOs with different
-   levels, which level does it get? Proposal: the level of its main (first) SLO.
-3. How many extra MCQs is "modest"? Proposal: 2 per SLO (about 18).
-4. Exercise Short Q5 refers to a picture. Leave it out, keep it with "(diagram in book)",
-   or print the picture?
-5. Do generated-question notes appear on the student paper or only in the answer key?
-6. The old plan made the app work offline on phones (ADR 0003). A backend means a server
-   must run. For the demo: run on one laptop (`npm run dev`) and keep offline install for later?
-7. Long-question marks: 5? Short questions with parts (a, b, c): still 2 marks?
+### Decisions (Izan / client, 2026-11-26)
+1. Chapter 1 = "Plant System". The book prints no SLO codes or levels; they come from the
+   client's coded list. Codes: S-07-A-01…05 = book SLOs 1…5, **S-07-A-06 = book SLOs 6 + 7**,
+   S-07-A-07 = book SLO 8, S-07-A-08 = book SLO 9 (order approved by the client).
+2. Level groups: Lower = Knowledge, Middle = Understanding, Higher = Application,
+   Analysis, Evaluate.
+3. Extra MCQs: 1 per SLO code (8).
+4. Generated-question notes: answer key only.
+5. Cognitive levels: shown on the review (swap/lock) screen and in the answer key,
+   never on the printed paper.
+6. Short Q5 picture is printed; a small crop of it is committed (page images stay ignored).
+7. Demo runs on one laptop (`npm run dev`); offline install comes later.
+8. Marks MCQ 1 / Short 2 / Long 5 and the difficulty presets are approved.
+9. Exercise unclear spots read from the book: MCQ 4 d = "mesophyll tissues";
+   MCQ 10 = "…if there would be no photosynthesis?".
+
+### Open questions (Izan / client)
+1. The cognitive level of each of the 8 codes (from the client's list).
+2. When an exercise question maps to two codes with different levels, which level does
+   it get? Proposal: the level of its main (first) code.
+3. Short questions with parts (a, b, c): still 2 marks in total?
 
 ### Risks
 - Small bank (about 28 exercise questions + extras): Swap will often be disabled and
   difficulty fallback will happen often. This is expected; the notes explain it.
-- Cut-off words in the scan (two exercise spots) need Izan to read the physical book.
+- Cut-off words in the scan may hide answers; answers must quote only clean text.
 
 ## Folder layout
 ```

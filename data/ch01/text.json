@@ -1584,8 +1584,8 @@
       "pdf_page": 21,
       "part": "exercise",
       "kind": "list_item",
-      "text": "4. The process of photosynthesis takes place in: a. ground tissues b. dermal tissues c. vascular tissues d. mesophyll [tissue?]",
-      "has_gaps": true
+      "text": "4. The process of photosynthesis takes place in: a. ground tissues b. dermal tissues c. vascular tissues d. mesophyll tissues",
+      "has_gaps": false
     },
     {
       "id": "ch01-p018-b07",
@@ -1638,8 +1638,8 @@
       "pdf_page": 21,
       "part": "exercise",
       "kind": "list_item",
-      "text": "10. Which gas would increase in the atmosphere if there would be no [photosynthesi?] a. Nitrogen b. Carbon dioxide c. Oxygen d. Hydrogen",
-      "has_gaps": true
+      "text": "10. Which gas would increase in the atmosphere if there would be no photosynthesis? a. Nitrogen b. Carbon dioxide c. Oxygen d. Hydrogen",
+      "has_gaps": false
     },
     {
       "id": "ch01-p018-b13",
